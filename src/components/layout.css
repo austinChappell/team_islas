@@ -39,6 +39,8 @@ template {
 }
 a {
   background-color: transparent;
+  color: inherit;
+  text-decoration: none;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
@@ -331,14 +333,15 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  list-style: none;
   list-style-position: outside;
   list-style-image: none;
 }
