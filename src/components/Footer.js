@@ -15,7 +15,7 @@ class Footer extends Component {
     return (
       <div
         style={{
-          backgroundColor: COLORS.PRIMARY_1,
+          backgroundColor: COLORS.PRIMARY_2,
         }}
       >
         <Container>
@@ -57,6 +57,8 @@ class Footer extends Component {
       <div
         style={{
           backgroundColor: COLORS.PRIMARY_1,
+          color: COLORS.FONT.LIGHT,
+          textAlign: 'center',
         }}
       >
         <Container>
@@ -90,6 +92,12 @@ class Footer extends Component {
               )
             })}
           </ul>
+          <p>
+            Doug Bush and Patricia Islas
+          </p>
+          <p>
+            &copy; Team Islas {new Date().getFullYear()}
+          </p>
         </Container>
       </div>
     )

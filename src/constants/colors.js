@@ -1,4 +1,6 @@
-const PRIMARY_1 = '#663399';
+const PRIMARY_1 = '#49256E';
+const PRIMARY_2 = '#663399';
+const PRIMARY_3 = '#994CE5'
 const SECONDARY_1 = '#bada55';
 
 const FONT = {
@@ -8,6 +10,8 @@ const FONT = {
 
 export const COLORS = {
   PRIMARY_1,
+  PRIMARY_2,
+  PRIMARY_3,
   SECONDARY_1,
   FONT,
 };

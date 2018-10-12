@@ -1,14 +1,20 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import ReactPlayer from 'react-player'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1
+      style={{
+        marginBottom: 20,
+      }}
+    >
+      New Album Coming Soon!
+    </h1>
+    <ReactPlayer
+      url="https://youtu.be/Lnul3DwS_bc"
+    />
   </Layout>
 )
 

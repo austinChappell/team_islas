@@ -12,6 +12,8 @@ const Header = ({ siteTitle }) => (
       background: COLORS.PRIMARY_1,
       color: COLORS.FONT.LIGHT,
       marginBottom: '1.45rem',
+      paddingBottom: 10,
+      paddingTop: 10,
     }}
   >
     <Container>
@@ -30,7 +32,11 @@ const Header = ({ siteTitle }) => (
           </Link>
         </h1>
         <Flex>
-          <h2>
+          <h2
+            style={{
+              marginRight: 10,
+            }}
+          >
             <Link to="/">
               Home
             </Link>
