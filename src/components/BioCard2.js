@@ -21,11 +21,10 @@ import {
 
 const styles = theme => ({
   card: {
-    width: 400,
+    maxWidth: 400,
   },
   media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
+    objectFit: 'cover',
   },
   actions: {
     display: 'flex',
@@ -68,6 +67,8 @@ class RecipeReviewCard extends React.Component {
           subheader="Some Subtitle"
         />
         <CardMedia
+          component="img"
+          height={180}
           className={classes.media}
           image={user.image}
           title="Contemplative Reptile"
