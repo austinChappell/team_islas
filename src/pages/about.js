@@ -7,7 +7,7 @@ import { Flex } from '../components/shared';
 
 import { BIOS } from '../data';
 
-const SecondPage = () => (
+const AboutPage = () => (
   <Layout>
     <Flex
       alignItems="flex-start"
@@ -27,4 +27,4 @@ const SecondPage = () => (
   </Layout>
 );
 
-export default SecondPage;
+export default AboutPage;

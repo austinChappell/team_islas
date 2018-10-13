@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -9,7 +9,6 @@ import {
   Container,
   Flex,
   Heading2,
-  Heading6,
 } from './shared';
 import { FaBars } from 'react-icons/fa';
 import { COLORS } from '../constants';
@@ -22,7 +21,11 @@ const SUB_MENU_ITEMS = [
   {
     label: 'About',
     path: '/about',
-  }
+  },
+  {
+    label: 'Super Hands',
+    path: '/super_hands',
+  },
 ];
 
 class Header extends Component {
@@ -64,11 +67,9 @@ class Header extends Component {
           {SUB_MENU_ITEMS.map(({ label, path }, index) => (
             <MenuItem
               key={index}
-              onClick={this.handleClose}
+              onClick={() => navigate(path)}
             >
-              <Link to={path}>
-                {label}
-              </Link>
+              {label}
             </MenuItem>
           ))}
         </Menu>
