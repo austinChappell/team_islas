@@ -1,30 +1,28 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 import { COLORS } from '../../constants';
 
-const Button = ({
+const CustomButton = ({
   backgroundColor = COLORS.PRIMARY_1,
   buttonText = 'Submit',
   color = COLORS.FONT.LIGHT,
+  href = null,
   onClick,
   unstyled = false,
-}) => {
-  return (
-    <button
-      onClick={(e) => onClick(e)}
-      style={{
-        alignItems: 'center',
-        backgroundColor: unstyled ? 'transparent' : backgroundColor,
-        borderRadius: 5,
-        border: 'none',
-        color: unstyled ? COLORS.FONT.PRIMARY_1 : color,
-        cursor: 'pointer',
-        display: 'flex',
-      }}
-    >
-      {buttonText}
-    </button>
-  )
-}
+}) => (
+  <Button
+    href={href}
+    onClick={e => onClick(e)}
+    style={{
+      alignItems: 'center',
+      backgroundColor: unstyled ? 'transparent' : backgroundColor,
+      color: unstyled ? COLORS.FONT.PRIMARY_1 : color,
+    }}
+    variant="contained"
+  >
+    {buttonText}
+  </Button>
+);
 
-export default Button;
+export default CustomButton;

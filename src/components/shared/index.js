@@ -1,3 +1,4 @@
+export { default as Banner } from './Banner';
 export { default as Button } from './Button';
 export { default as Card } from './Card';
 export { default as Container } from './Container';
@@ -13,3 +14,4 @@ export {
   SmallBody,
   FinePrint,
 } from './texts';
+export { default as ResponsiveVideoPlayer } from './ResponsiveVideoPlayer';

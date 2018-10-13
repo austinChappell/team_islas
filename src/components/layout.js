@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { Container } from './shared';
 import Footer from './Footer';
 import Header from './header'
 import './layout.css'
@@ -38,13 +37,13 @@ const Layout = ({ children }) => (
           }}
         >
           <Header siteTitle={data.site.siteMetadata.title} />
-          <Container
+          <div
             style={{
               flexGrow: 1,
             }}
           >
             {children}
-          </Container>
+          </div>
           <Footer/>
         </div>
       </>

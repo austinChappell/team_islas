@@ -1,36 +1,27 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/layout';
 import ReactPlayer from 'react-player';
+import Layout from '../components/layout';
 
-import { Heading1 } from '../components/shared';
+import {
+  Container,
+  Heading1,
+  ResponsiveVideoPlayer,
+} from '../components/shared';
 
 const IndexPage = () => (
   <Layout>
-    <div>
-      <Heading1>
-        New Album Coming Soon!
-      </Heading1>
-    </div>
-    <div
-      style={{
-        position: 'relative',
-        paddingTop: '56.25%',
-        flexGrow: 1,
-      }}
-    >
-      <ReactPlayer
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-        }}
-        width="100%"
-        height="100%"
+    <Container>
+      <div>
+        <Heading1>
+          New Album Coming Soon!
+        </Heading1>
+      </div>
+      <ResponsiveVideoPlayer
         url="https://youtu.be/Lnul3DwS_bc"
       />
-    </div>
+    </Container>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
