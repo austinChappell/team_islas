@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import YouTube from 'react-youtube';
+import { css } from 'react-emotion';
 import { withStyles } from '@material-ui/core/styles';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -23,9 +25,29 @@ const styles = () => ({
   },
 });
 
+const MODAL_PADDING = 10;
+
 class VideoList extends Component {
+  modalWrapper = React.createRef();
+  vidListContainer = React.createRef();
+
   state = {
     currentVideo: null,
+    videoOptions: {
+      height: null,
+      playerVars: {}, // https://developers.google.com/youtube/player_parameters
+      width: null,
+      marginBottom: 0,
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.setVideoDimensions);
+    this.setVideoDimensions();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.setVideoDimensions);
   }
 
   clearVideo = () => {
@@ -33,12 +55,30 @@ class VideoList extends Component {
   }
 
   loadVideo = (currentVideo) => {
-    console.log('loading video', currentVideo);
     this.setState({ currentVideo });
   }
 
+  setVideoDimensions = () => {
+    const videoContainerWidth = this.vidListContainer.clientWidth;
+    const { videoOptions } = this.state;
+    const aspectRatio = 9 / 16;
+    videoOptions.height = `${(videoContainerWidth * aspectRatio) - MODAL_PADDING * 2}px`;
+    videoOptions.width = `${videoContainerWidth - MODAL_PADDING * 2}px`;
+    this.setState({ videoOptions });
+  }
+
   renderVideoPlayerModal = () => {
-    const { currentVideo } = this.state;
+    const {
+      currentVideo,
+      videoOptions,
+    } = this.state;
+
+    const videoStyle = css`
+      margin-bottom: 0;
+      height: ${videoOptions.height};
+      width: ${videoOptions.width};
+    `;
+  
     return (
       <Modal
         aria-labelledby="simple-modal-title"
@@ -46,33 +86,39 @@ class VideoList extends Component {
         open={!!currentVideo}
         onClose={this.clearVideo}
       >
+          <Container>
         <div
+          ref={el => this.modalWrapper = el}
           style={{
             backgroundColor: 'white',
+            padding: 10,
             margin: '10vh auto',
-            width: '80%',
           }}
         >
-          {currentVideo && (
-            <Container>
-              <ResponsiveVideoPlayer
-                url={`https://youtu.be/${currentVideo.youtubeId}`}
+            {currentVideo && (
+              <YouTube
+                className={videoStyle}
+                videoId={currentVideo.youtubeId}
               />
-            </Container>
-          )}
+            )}
         </div>
+          </Container>
       </Modal>
     )
   }
 
   render() {
+    const { currentVideo } = this.state;
     const {
       classes,
       videos,
     } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div
+        className={classes.root}
+        ref={el => this.vidListContainer = el}
+      >
         {videos.map((vid, index) => {
           return (
             <ExpansionPanel key={index}>
@@ -100,7 +146,7 @@ class VideoList extends Component {
             </ExpansionPanel>
           )
         })}
-        {this.renderVideoPlayerModal()}
+        {currentVideo && this.renderVideoPlayerModal()}
       </div>
     );
   }
