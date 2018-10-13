@@ -59,45 +59,51 @@ class Footer extends Component {
         style={{
           backgroundColor: COLORS.PRIMARY_1,
           padding: 10,
-          textAlign: 'center',
         }}
       >
         <Container>
-          <ul
-            style={{
-              alignItems: 'center',
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-            }}            
+          <Flex
+            justifyContent="space-evenly"
           >
-            {SOCIAL_MEDIA_LINKS.map((link, index) => {
-              const {
-                Icon,
-                href,
-              } = link;
-              return (
-                <li
-                  key={index}
-                  style={{
-                    margin: 5,
-                  }}
-                >
-                  <a href={href} target="_blank">
-                    <Icon
-                      size={24}
-                    />
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-          <FinePrint light>
-            Doug Bush and Patricia Islas
-          </FinePrint>
-          <FinePrint light>
-            &copy; Team Islas {new Date().getFullYear()}
-          </FinePrint>
+            <div>
+              <FinePrint light>
+                Doug Bush and Patricia Islas
+              </FinePrint>
+              <FinePrint light>
+                &copy; Team Islas {new Date().getFullYear()}
+              </FinePrint>
+            </div>
+
+            <ul
+              style={{
+                alignItems: 'center',
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+              }}            
+            >
+              {SOCIAL_MEDIA_LINKS.map((link, index) => {
+                const {
+                  Icon,
+                  href,
+                } = link;
+                return (
+                  <li
+                    key={index}
+                    style={{
+                      margin: 5,
+                    }}
+                  >
+                    <a href={href} target="_blank">
+                      <Icon
+                        size={24}
+                      />
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </Flex>
         </Container>
       </div>
     )

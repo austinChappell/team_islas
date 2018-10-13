@@ -14,6 +14,7 @@ export const LargeBody = ({
       color: light ? COLORS.FONT.LIGHT : COLORS.FONT.DARK,
       fontFamily: FONT_FAMILIES.BODY,
       fontSize: FONT_SIZES.LARGE_BODY,
+      margin: '15px 0',
     }}
   >
     {children}
