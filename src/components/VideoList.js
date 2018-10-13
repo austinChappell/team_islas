@@ -49,7 +49,7 @@ class VideoList extends Component {
         <div
           style={{
             backgroundColor: 'white',
-            margin: '20% auto',
+            margin: '10vh auto',
             width: '80%',
           }}
         >
