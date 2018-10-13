@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   Container,
+  FinePrint,
   Flex,
 } from './shared';
 import { COLORS } from '../constants';
@@ -8,7 +9,6 @@ import {
   SOCIAL_MEDIA_LINKS,
   SPONSORS,
 } from '../data';
-import { FaFacebook } from 'react-icons/fa';
 
 class Footer extends Component {
   renderSubFooter = () => {
@@ -16,6 +16,7 @@ class Footer extends Component {
       <div
         style={{
           backgroundColor: COLORS.PRIMARY_2,
+          padding: 5,
         }}
       >
         <Container>
@@ -37,7 +38,7 @@ class Footer extends Component {
                 <li
                   key={index}
                   style={{
-                    margin: 10,
+                    margin: '0 10px',
                   }}
                 >
                   <a href={href} target="_blank">
@@ -57,7 +58,7 @@ class Footer extends Component {
       <div
         style={{
           backgroundColor: COLORS.PRIMARY_1,
-          color: COLORS.FONT.LIGHT,
+          padding: 10,
           textAlign: 'center',
         }}
       >
@@ -84,7 +85,6 @@ class Footer extends Component {
                 >
                   <a href={href} target="_blank">
                     <Icon
-                      color={COLORS.FONT.LIGHT}
                       size={24}
                     />
                   </a>
@@ -92,12 +92,12 @@ class Footer extends Component {
               )
             })}
           </ul>
-          <p>
+          <FinePrint light>
             Doug Bush and Patricia Islas
-          </p>
-          <p>
+          </FinePrint>
+          <FinePrint light>
             &copy; Team Islas {new Date().getFullYear()}
-          </p>
+          </FinePrint>
         </Container>
       </div>
     )
@@ -105,7 +105,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ color: COLORS.FONT.LIGHT }}>
         {this.renderSubFooter()}
         {this.renderMainFooter()}
       </div>

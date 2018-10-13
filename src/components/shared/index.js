@@ -1,2 +1,15 @@
+export { default as Button } from './Button';
+export { default as Card } from './Card';
 export { default as Container } from './Container';
 export { default as Flex } from './Flex';
+export {
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
+  LargeBody,
+  SmallBody,
+  FinePrint,
+} from './texts';

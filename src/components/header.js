@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import {
   Container,
   Flex,
+  Heading2,
 } from './shared';
 import { COLORS } from '../constants';
 
@@ -10,8 +11,6 @@ const Header = ({ siteTitle }) => (
   <div
     style={{
       background: COLORS.PRIMARY_1,
-      color: COLORS.FONT.LIGHT,
-      marginBottom: '1.45rem',
       paddingBottom: 10,
       paddingTop: 10,
     }}
@@ -20,32 +19,29 @@ const Header = ({ siteTitle }) => (
       <Flex
         justifyContent="space-between"
       >
-        <h1 style={{ margin: 0 }}>
+        <Heading2 light>
           <Link
             to="/"
             style={{
-              color: 'white',
               textDecoration: 'none',
             }}
           >
             {siteTitle}
           </Link>
-        </h1>
+        </Heading2>
         <Flex>
-          <h2
-            style={{
-              marginRight: 10,
-            }}
-          >
-            <Link to="/">
-              Home
-            </Link>
-          </h2>
-          <h2>
+          <div style={{ marginRight: 10 }}>
+            <Heading2 light>
+              <Link to="/">
+                Home
+              </Link>
+            </Heading2>
+          </div>
+          <Heading2 light>
             <Link to="/about">
               About
             </Link>
-          </h2>
+          </Heading2>
         </Flex>
       </Flex>
     </Container>

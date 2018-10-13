@@ -1,13 +1,20 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
 
+import BioCard from '../components/BioCard';
 import Layout from '../components/layout'
+
+import { BIOS } from '../data';
 
 const SecondPage = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    {BIOS.map((bio, index) => {
+      return (
+        <BioCard
+          key={index}
+          user={bio}
+        />
+      )
+    })}
   </Layout>
 )
 

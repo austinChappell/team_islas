@@ -1,17 +1,17 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import ReactPlayer from 'react-player'
+import Layout from '../components/layout';
+import ReactPlayer from 'react-player';
+
+import { Heading1 } from '../components/shared';
 
 const IndexPage = () => (
   <Layout>
-    <h1
-      style={{
-        marginBottom: 20,
-      }}
-    >
-      New Album Coming Soon!
-    </h1>
+    <div>
+      <Heading1>
+        New Album Coming Soon!
+      </Heading1>
+    </div>
     <ReactPlayer
       url="https://youtu.be/Lnul3DwS_bc"
     />

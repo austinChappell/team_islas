@@ -5,8 +5,7 @@ const Container = ({ children, style, ...props }) => (
     style={{
       margin: '0 auto',
       maxWidth: 960,
-      paddingLeft: '1.0875rem',
-      paddingRight: '1.0875rem',
+      padding: '20px 1.0875rem',
       ...style,
     }}
     {...props}
