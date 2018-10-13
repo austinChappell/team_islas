@@ -1,7 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link } from 'gatsby'
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 import {
-  Button,
+  // Button,
   Container,
   Flex,
   Heading2,
@@ -23,57 +27,52 @@ const SUB_MENU_ITEMS = [
 
 class Header extends Component {
   state = {
+    anchorEl: null,
     subMenuOpen: false,
   }
 
-  handleOutsideClick = (e) => {
-    e.stopPropagation();
-    this.setState({ subMenuOpen: false });
-  }
+  handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
 
-  toggleSubMenu = () => {
-    const { subMenuOpen } = this.state;
-    this.setState({ subMenuOpen: !subMenuOpen });
-  }
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+  };
 
-  renderSubMenu = () => {
+  renderSub = () => {
+    const { anchorEl } = this.state;
+
     return (
-      <div
-        onClick={e => this.handleOutsideClick(e)}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 1,
-        }}
-      >
-        <div
-          onClick={e => e.stopPropagation()} // prevent handleOutsideClick from firing if clicked inside submenu
-          style={{
-            backgroundColor: COLORS.FONT.LIGHT,
-            boxShadow: `2px 2px 4px ${COLORS.FONT.DARK_SOFT}`,
-            position: 'fixed',
-            right: 30,
-            top: 70,
-          }}
+      <Fragment>
+        <Button
+          aria-owns={anchorEl ? 'simple-menu' : null}
+          aria-haspopup="true"
+          onClick={this.handleClick}
+        >
+          <FaBars
+            color={COLORS.FONT.LIGHT}
+            size={26}
+          />
+        </Button>
+
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={this.handleClose}
         >
           {SUB_MENU_ITEMS.map(({ label, path }, index) => (
-            <div
-              style={{
-                margin: 10,
-              }}
+            <MenuItem
+              key={index}
+              onClick={this.handleClose}
             >
-              <Heading6>
-                <Link to={path}>
-                  {label}
-                </Link>
-              </Heading6>
-            </div>
+              <Link to={path}>
+                {label}
+              </Link>
+            </MenuItem>
           ))}
-        </div>
-      </div>
+        </Menu>
+      </Fragment>
     )
   }
 
@@ -103,20 +102,9 @@ class Header extends Component {
                 {siteTitle}
               </Link>
             </Heading2>
-            <Button
-              buttonText={
-                <FaBars
-                color={COLORS.FONT.LIGHT}
-                size={26}
-                />
-              }
-              onClick={this.toggleSubMenu}
-              unstyled
-            >
-            </Button>
+            {this.renderSub()}
           </Flex>
         </Container>
-        {subMenuOpen && this.renderSubMenu()}
       </div>
     )
   }
