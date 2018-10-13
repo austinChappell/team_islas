@@ -7,6 +7,7 @@ const DISABLED = '#cccccc';
 const FONT = {
   LIGHT: '#ffffff',
   DARK: '#333333',
+  DARK_SOFT: '#777777',
 }
 
 export const COLORS = {

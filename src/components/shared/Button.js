@@ -13,11 +13,13 @@ const Button = ({
     <button
       onClick={(e) => onClick(e)}
       style={{
+        alignItems: 'center',
         backgroundColor: unstyled ? 'transparent' : backgroundColor,
         borderRadius: 5,
         border: 'none',
         color: unstyled ? COLORS.FONT.PRIMARY_1 : color,
         cursor: 'pointer',
+        display: 'flex',
       }}
     >
       {buttonText}
