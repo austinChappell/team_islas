@@ -9,10 +9,14 @@ const SecondPage = () => (
   <Layout>
     {BIOS.map((bio, index) => {
       return (
-        <BioCard
+        <div
           key={index}
-          user={bio}
-        />
+          style={{
+            margin: 15,
+          }}
+        >
+          <BioCard user={bio} />
+        </div>
       )
     })}
   </Layout>

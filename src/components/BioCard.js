@@ -6,9 +6,28 @@ import {
   LargeBody,
 } from '../components/shared';
 
+const MAX_HEIGHT = 200;
+
 class BioCard extends Component {
+  innerContent = React.createRef();
+
   state = {
+    exceedsContainer: true,
     isExpanded: false,
+    innerContentHeight: MAX_HEIGHT,
+  }
+
+  componentDidMount() {
+    this.setInnerContentHeight();
+  }
+
+  setInnerContentHeight = () => {
+    const innerContentHeight = this.innerContent.clientHeight;
+    const exceedsContainer = innerContentHeight > MAX_HEIGHT;
+    this.setState({
+      exceedsContainer,
+      innerContentHeight,
+    });
   }
 
   toggleExpand = () => {
@@ -17,39 +36,54 @@ class BioCard extends Component {
   }
 
   render() {
-    const { isExpanded } = this.state;
+    const {
+      exceedsContainer,
+      innerContentHeight,
+      isExpanded,
+    } = this.state;
     const { user } = this.props;
 
     return (
       <Card>
         <div
           style={{
-            maxHeight: !isExpanded && 120,
+            height: isExpanded || !exceedsContainer ? innerContentHeight : MAX_HEIGHT,
             overflow: 'hidden',
             position: 'relative',
+            transition: '250ms',
           }}
         >
-          <Heading3>
-            {user.title}
-          </Heading3>
-          {user.paragraphs.map((para, index) => {
-            return (
-              <LargeBody key={index}>
-                {para}
-              </LargeBody>
-            )
-          })}
           <div
-            style={{
-              background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
-              bottom: 0,
-              height: 50,
-              position: 'absolute',
-              width: '100%',
-            }}
-          />
-        </div>
-        <div style={{
+            ref={el => this.innerContent = el}
+          >
+            <div
+              style={{
+                marginBottom: 10,
+              }}
+            >
+              <Heading3>
+                {user.title}
+              </Heading3>
+            </div>
+            {user.paragraphs.map((para, index) => {
+              return (
+                <LargeBody key={index}>
+                  {para}
+                </LargeBody>
+              )
+            })}
+            {!isExpanded && exceedsContainer && <div
+              style={{
+                background: 'linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+                bottom: 0,
+                height: 100,
+                position: 'absolute',
+                width: '100%',
+              }}
+            />}
+          </div>
+          </div>
+        {exceedsContainer && <div style={{
           alignSelf: 'center',
           bottom: 5,
           position: 'absolute',
@@ -60,7 +94,7 @@ class BioCard extends Component {
             onClick={this.toggleExpand}
             unstyled
           />
-        </div>
+        </div>}
       </Card>
     )
   }
