@@ -68,7 +68,13 @@ class ContactForm extends Component {
     const formValid = emailValid && messageValid && nameValid && phoneValid;
 
     return (
-      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
       <input type="hidden" name="bot-field" />
   
         <TextField
