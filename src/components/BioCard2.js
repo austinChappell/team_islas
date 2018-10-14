@@ -64,7 +64,6 @@ class RecipeReviewCard extends React.Component {
       <Card className={classes.card}>
         <CardHeader
           title={user.title}
-          subheader="Some Subtitle"
         />
         <CardMedia
           component="img"
