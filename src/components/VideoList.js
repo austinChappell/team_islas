@@ -24,6 +24,11 @@ const styles = () => ({
     marginBottom: 60,
     width: '100%',
   },
+  modal: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  }
 });
 
 const MODAL_PADDING = 10;
@@ -84,26 +89,27 @@ class VideoList extends Component {
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
+        className={styles.modal}
         open={!!currentVideo}
         onClose={this.clearVideo}
       >
-          <Container>
-        <div
-          ref={el => this.modalWrapper = el}
-          style={{
-            backgroundColor: 'white',
-            padding: 10,
-            margin: '10vh auto',
-          }}
-        >
-            {currentVideo && (
-              <YouTube
-                className={videoStyle}
-                videoId={currentVideo.youtubeId}
-              />
-            )}
-        </div>
-          </Container>
+        <Container>
+          <div
+            ref={el => this.modalWrapper = el}
+            style={{
+              backgroundColor: 'white',
+              padding: 10,
+              margin: '0 auto',
+            }}
+          >
+              {currentVideo && (
+                <YouTube
+                  className={videoStyle}
+                  videoId={currentVideo.youtubeId}
+                />
+              )}
+          </div>
+        </Container>
       </Modal>
     )
   }
