@@ -21,6 +21,7 @@ import {
 
 const styles = () => ({
   root: {
+    marginBottom: 60,
     width: '100%',
   },
 });

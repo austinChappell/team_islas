@@ -6,6 +6,7 @@ const Flex = ({
   flexDirection = 'row',
   flexWrap = 'wrap',
   justifyContent = 'flex-start',
+  style,
   ...props
 }) => (
   <div
@@ -15,6 +16,7 @@ const Flex = ({
       flexDirection,
       flexWrap,
       justifyContent,
+      ...style,
     }}
     {...props}
   >

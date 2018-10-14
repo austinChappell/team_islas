@@ -1,5 +1,6 @@
 import React from 'react';
 
+import BioCard from '../components/BioCard';
 import BioCard2 from '../components/BioCard2';
 import Layout from '../components/layout';
 

@@ -8,6 +8,7 @@ import {
 export const SmallBody = ({
   children,
   light = false,
+  style = {},
 }) => (
   <p
     style={{
@@ -15,6 +16,7 @@ export const SmallBody = ({
       fontFamily: FONT_FAMILIES.BODY,
       fontSize: FONT_SIZES.SMALL_BODY,
       margin: '15px 0',
+      ...style,
     }}
   >
     {children}
