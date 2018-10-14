@@ -3,9 +3,9 @@ import { Link, navigate } from 'gatsby'
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import TeamIslasLogo from '../images/team-islas-logo-white.png';
 
 import {
-  // Button,
   Container,
   Flex,
   Heading2,
@@ -104,7 +104,11 @@ class Header extends Component {
                   textDecoration: 'none',
                 }}
               >
-                {siteTitle}
+                <img
+                  height={height * 0.8}
+                  src={TeamIslasLogo}
+                />
+                {/* {siteTitle} */}
               </Link>
             </Heading2>
             {this.renderSub()}
