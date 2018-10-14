@@ -68,22 +68,9 @@ class ContactForm extends Component {
     const formValid = emailValid && messageValid && nameValid && phoneValid;
 
     return (
-      <form
-        name={FORM_NAME}
-        method="post"
-        action={FORM_ACTION}
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        style={{ padding: 20 }}
-      >
-        <input type="hidden" name="form-name" value={FORM_NAME} />
-        <p hidden>
-          <label>
-            Don’t fill this out:{" "}
-            <input name="bot-field" onChange={this.handleChange} />
-          </label>
-        </p>
-
+      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="bot-field" />
+  
         <TextField
           className={inputStyle}
           id="name"
@@ -139,7 +126,8 @@ class ContactForm extends Component {
         <div style={{ textAlign: 'center', margin: 10 }}>
           <Button
             disabled={!formValid}
-            onClick={this.handleSubmit}
+            type="submit"
+            // onClick={this.handleSubmit}
           />
         </div>
       </form>

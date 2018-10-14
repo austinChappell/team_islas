@@ -10,6 +10,7 @@ const CustomButton = ({
   disabled = false,
   href = null,
   onClick,
+  type = 'button',
   unstyled = false,
 }) => {
   let bgColor = unstyled ? 'transparent' : backgroundColor;
@@ -31,6 +32,7 @@ const CustomButton = ({
         backgroundColor: bgColor,
         color: textColor,
       }}
+      type={type}
       variant="contained"
     >
       {buttonText}

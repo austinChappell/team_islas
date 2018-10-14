@@ -29,8 +29,8 @@ const AboutPage = () => (
         ))}
       </Flex>
 
-      {/* <ContactForm /> */}
-      <UncontrolledContactForm />
+      <ContactForm />
+      {/* <UncontrolledContactForm /> */}
     </Container>
   </Layout>
 );
