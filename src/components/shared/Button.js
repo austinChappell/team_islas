@@ -7,22 +7,35 @@ const CustomButton = ({
   backgroundColor = COLORS.PRIMARY_1,
   buttonText = 'Submit',
   color = COLORS.FONT.LIGHT,
+  disabled = false,
   href = null,
   onClick,
   unstyled = false,
-}) => (
-  <Button
-    href={href}
-    onClick={e => onClick(e)}
-    style={{
-      alignItems: 'center',
-      backgroundColor: unstyled ? 'transparent' : backgroundColor,
-      color: unstyled ? COLORS.FONT.PRIMARY_1 : color,
-    }}
-    variant="contained"
-  >
-    {buttonText}
-  </Button>
-);
+}) => {
+  let bgColor = unstyled ? 'transparent' : backgroundColor;
+  let textColor = unstyled ? COLORS.FONT.PRIMARY_1 : color;
+  if (!unstyled && disabled) {
+    bgColor = COLORS.DISABLED;
+    textColor = COLORS.FONT.DARK_SOFT;
+  }
+  if (unstyled && disabled) {
+    textColor = COLORS.DISABLED;
+  }
+  return (
+    <Button
+      disabled={disabled}
+      href={href}
+      onClick={e => onClick(e)}
+      style={{
+        alignItems: 'center',
+        backgroundColor: bgColor,
+        color: textColor,
+      }}
+      variant="contained"
+    >
+      {buttonText}
+    </Button>
+  );
+};
 
 export default CustomButton;

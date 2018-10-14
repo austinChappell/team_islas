@@ -2,6 +2,7 @@ import React from 'react';
 
 import BioCard from '../components/BioCard';
 import BioCard2 from '../components/BioCard2';
+import ContactForm from '../components/ContactForm';
 import Layout from '../components/layout';
 
 import { Container, Flex } from '../components/shared';
@@ -26,6 +27,8 @@ const AboutPage = () => (
           </div>
         ))}
       </Flex>
+
+      <ContactForm />
     </Container>
   </Layout>
 );
