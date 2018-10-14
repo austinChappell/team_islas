@@ -16,6 +16,9 @@ const inputStyle = css({
   margin: '10px 0',
 })
 
+const FORM_NAME = 'contact';
+const FORM_ACTION = `/${FORM_NAME}`;
+
 class ContactForm extends Component {
   state = {
     email: '',
@@ -35,11 +38,11 @@ class ContactForm extends Component {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        "form-name": FORM_NAME,
         ...this.state
       })
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => navigateTo(FORM_ACTION))
       .catch(error => alert(error));
   };
 
@@ -60,9 +63,9 @@ class ContactForm extends Component {
 
     return (
       <form
-        name="contact"
+        name={FORM_NAME}
         method="post"
-        action="/thanks/"
+        action={FORM_ACTION}
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         style={{ padding: 20 }}
