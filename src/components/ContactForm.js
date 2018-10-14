@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import { css } from 'react-emotion';
 import validator from 'validator';
 
-function encode(data) {
+const encode = (data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
@@ -33,16 +33,22 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": FORM_NAME,
-        ...this.state
-      })
+    const body = encode({
+      'form-name': FORM_NAME,
+      ...this.state
+    });
+    console.log({ body });
+    fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body,
     })
-      .then(() => navigate(FORM_ACTION))
+      .then((res) => {
+        console.log({ res })
+        // navigate(FORM_ACTION)
+      })
       .catch(error => alert(error));
   };
 
