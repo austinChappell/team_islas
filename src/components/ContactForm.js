@@ -3,7 +3,10 @@ import TextField from '@material-ui/core/TextField';
 import { css } from 'react-emotion';
 import validator from 'validator';
 
-import { Button } from './shared';
+import {
+  Button,
+  Heading3,
+} from './shared';
 
 const inputStyle = css({
   margin: '10px 0',
@@ -37,73 +40,81 @@ class ContactForm extends Component {
     const formValid = emailValid && messageValid && nameValid && phoneValid;
 
     return (
-      <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-      <input type="hidden" name="bot-field" />
-  
-        <TextField
-          className={inputStyle}
-          id="name"
-          fullWidth
-          label="Name"
-          margin="normal"
-          name="name"
-          onChange={this.handleChange}
-          value={name}
-          variant="outlined"
-        />
-
-        <TextField
-          className={inputStyle}
-          id="email"
-          fullWidth
-          label="Email"
-          margin="normal"
-          name="email"
-          onChange={this.handleChange}
-          type="email"
-          value={email}
-          variant="outlined"
-        />
-
-        <TextField
-          className={inputStyle}
-          id="phone"
-          fullWidth
-          label="Phone"
-          margin="normal"
-          name="phone"
-          onChange={this.handleChange}
-          type="tel"
-          value={phone}
-          variant="outlined"
-        />
-
-        <TextField
-          className={inputStyle}
-          id="message"
-          fullWidth
-          label="Message"
-          margin="normal"
-          multiline
-          name="message"
-          onChange={this.handleChange}
-          rowsMax="4"
-          value={message}
-          variant="outlined"
-        />
-
-        <div style={{ textAlign: 'center', margin: 10 }}>
-          <Button
-            disabled={!formValid}
-            type="submit"
-          />
+      <div style={{ marginTop: 20 }}>
+        <div style={{ marginBottom: 10, textAlign: 'center' }}>
+          <Heading3>
+            Get In Touch
+          </Heading3>
         </div>
-      </form>
+
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+        <input type="hidden" name="bot-field" />
+    
+          <TextField
+            className={inputStyle}
+            id="name"
+            fullWidth
+            label="Name"
+            margin="normal"
+            name="name"
+            onChange={this.handleChange}
+            value={name}
+            variant="outlined"
+          />
+
+          <TextField
+            className={inputStyle}
+            id="email"
+            fullWidth
+            label="Email"
+            margin="normal"
+            name="email"
+            onChange={this.handleChange}
+            type="email"
+            value={email}
+            variant="outlined"
+          />
+
+          <TextField
+            className={inputStyle}
+            id="phone"
+            fullWidth
+            label="Phone"
+            margin="normal"
+            name="phone"
+            onChange={this.handleChange}
+            type="tel"
+            value={phone}
+            variant="outlined"
+          />
+
+          <TextField
+            className={inputStyle}
+            id="message"
+            fullWidth
+            label="Message"
+            margin="normal"
+            multiline
+            name="message"
+            onChange={this.handleChange}
+            rowsMax="4"
+            value={message}
+            variant="outlined"
+          />
+
+          <div style={{ textAlign: 'center', margin: 10 }}>
+            <Button
+              disabled={!formValid}
+              type="submit"
+            />
+          </div>
+        </form>
+      </div>
     )
   }
 }
