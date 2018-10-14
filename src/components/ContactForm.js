@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import { navigateTo } from "gatsby-link";
 import TextField from '@material-ui/core/TextField';
 import { css } from 'react-emotion';
 import validator from 'validator';
 
-import {
-  Button,
-  Flex,
-} from './shared';
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
+import { Button } from './shared';
 
 const inputStyle = css({
   margin: '10px 0',
@@ -61,7 +65,6 @@ class ContactForm extends Component {
         action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
         style={{ padding: 20 }}
       >
         <input type="hidden" name="form-name" value="contact" />
@@ -125,7 +128,10 @@ class ContactForm extends Component {
         />
 
         <div style={{ textAlign: 'center', margin: 10 }}>
-          <Button disabled={!formValid} />
+          <Button
+            disabled={!formValid}
+            onClick={this.handleSubmit}
+          />
         </div>
       </form>
     )
