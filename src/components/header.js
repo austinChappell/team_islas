@@ -79,14 +79,18 @@ class Header extends Component {
 
   render() {
     const { subMenuOpen } = this.state;
-    const { siteTitle } = this.props;
+    const { height, siteTitle } = this.props;
 
     return (
-      <div
+      <Flex
         style={{
           background: COLORS.PRIMARY_1,
-          paddingBottom: 10,
-          paddingTop: 10,
+          height,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 100,
         }}
       >
         <Container>
@@ -106,7 +110,7 @@ class Header extends Component {
             {this.renderSub()}
           </Flex>
         </Container>
-      </div>
+      </Flex>
     )
   }
 }

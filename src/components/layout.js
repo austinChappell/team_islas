@@ -1,11 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
 import Footer from './Footer';
-import Header from './header'
-import './layout.css'
+import Header from './header';
+import './layout.css';
+
+const NAVBAR_HEIGHT = 60;
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -36,23 +38,27 @@ const Layout = ({ children }) => (
             minHeight: '100vh',
           }}
         >
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header
+            height={NAVBAR_HEIGHT}
+            siteTitle={data.site.siteMetadata.title}
+          />
           <div
             style={{
               flexGrow: 1,
+              paddingTop: NAVBAR_HEIGHT,
             }}
           >
             {children}
           </div>
-          <Footer/>
+          <Footer />
         </div>
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
