@@ -39,52 +39,52 @@ export const SUPER_HANDS_QUOTES = [
 
 export const SUPER_HANDS_VIDS = [
   {
-    description: 'This is a video description',
+    description: 'Jam in 58 - Jam in 58 is based off of a 50 beat 8th note pulse theme that is felt 3+3+2+2+2+3+3+2+2+2+3+3+2+2+2+2+2+3+2+2+3 (Yay math!).  At B your right hand will play this exact accent pattern on the rim. Notice at B the dynamic is mezzo piano (mp). This section should have a light drum and bass - type feel.',
     title: 'Jam in 5/8',
     youtubeId: 'uTO0KbZJ05E',
   },
   {
-    description: 'This is a video description',
+    description: '7 Step Process - This solo was written for my good friend and master teacher Chad Gibson. If you are playing it at 125 BPM the metric change at B will bring it to 180 BPM. Notice that the speed of the 16th notes in measure 21 is the same speed as the triplets in measure 22 and that the accents in measure 56 will become the quarter note accents in measure 57.',
     title: '7 Step Process',
     youtubeId: 'TzgnHDj_6pQ',
   },
   {
-    description: 'This is a video description',
+    description: 'Syncopated City - This solo was inspired by the "London Electricity" song of the same name. Top of the solo to B should be felt 3+2+2+3. Then B to measure 43 is felt 3+3+2+2.',
     title: 'Syncopated City',
     youtubeId: '5BHQ3H_eCac',
   },
   {
-    description: 'This is a video description',
+    description: 'Muy Guapo - The rhythm of the first two measures is a common Afo-Cuban rhythm known as a "Cascara".  Feel free to play the rim parts on a cowbell for added texture.',
     title: 'Muy Guapo',
     youtubeId: '9SIPyWFzq4w',
   },
   {
-    description: 'This is a video description',
+    description: 'Yoga Fire - The 7/8 time is pulsed 2+2+3 throughout this solo. Also note, if you are practicing with your metronome (and you are practicing with a metronome, right?), that measure 44 to the end will be on the upbeats.',
     title: 'Yoga Fire',
     youtubeId: 'z5FODt3Tx0E',
   },
   {
-    description: 'This is a video description',
+    description: 'Bass in YO FACE! - Make sure that what you are playing on the rim does not affect what you are playing on the drum. In measure 20, feel free to turn on the snares at any time but do not allow that motion to affect the consistency of the 8th notes on the rim.',
     title: 'Bass in YO FACE!',
     youtubeId: 'ZEuQR6YFa34',
   },
   {
-    description: 'This is a video description',
+    description: 'Beast Mode - The main focus of this solo is to develop rolls. Take extra effort to ensure that the tenutos and accents at the mezzo piano (mp) volume sound different from one another. When turning the snares on or off be very deliberate with the timing to ensure the proper musical effect.',
     title: 'Beast Mode',
     youtubeId: 'fTjUUhBSOUw',
   },
   {
-    description: 'This is a video description',
+    description: 'Sonic BOOOOOOOM! - This is a great solo for developing your single stroke speed. As you play faster remember to use a  lower height and a lighter touch. Focus on working WITH the natural rebound to "guide" the stick rather than "controlling" it.',
     title: 'Sonic Boom',
     youtubeId: '6ot8jNEtplk',
   },
   {
-    description: 'This is a video description',
+    description: 'Brown Recluse - This solo was written for my good friend and master teacher James Smith. Once you can comfortably play this solo at quarter note equals 208 put the metronome on quarter note equals 104 and see if you can feel the solo as 16th notes instead of 8th notes.',
     title: 'Brown Recluse',
     youtubeId: 'Du0x8Stj6w0',
   },
   {
-    description: 'This is a video description',
+    description: 'Sticks Up - Congrats! You have made it to the toughest solo in the book! This solo was written for my good friend and master teacher Jimmy LaBrecque. When playing a solo that is very rhythmically demanding, it is important to transition carefully from one technique to the next as to perform the rhythms accurately and without slurring. There are several complex stickings in this solo that will, in order to ensure they sound smooth at fast tempos, require patience to learn.',
     title: 'Sticks Up',
     youtubeId: 'xtaZFLGE1SI',
   },

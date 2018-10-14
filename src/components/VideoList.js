@@ -31,6 +31,15 @@ const styles = () => ({
   }
 });
 
+const videoWrapper = css({
+  flexBasis: 150,
+});
+
+const videoDescriptionWrapper = css({
+  flexBasis: 200,
+  flexGrow: 1,
+});
+
 const MODAL_PADDING = 10;
 
 class VideoList extends Component {
@@ -129,15 +138,17 @@ class VideoList extends Component {
         {videos.map((vid, index) => {
           return (
             <ExpansionPanel key={index}>
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+              >
                 <Heading5>
                   {vid.title}
                 </Heading5>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <div
+                  className={videoWrapper}
                   onClick={() => this.loadVideo(vid)}
-                  style={{ marginRight: 10 }}
                 >
                   <img
                     height={100}
@@ -146,9 +157,11 @@ class VideoList extends Component {
                   />
                 </div>
 
-                <LargeBody>
-                  {vid.description}
-                </LargeBody>
+                <div className={videoDescriptionWrapper}>
+                  <LargeBody>
+                    {vid.description}
+                  </LargeBody>
+                </div>
               </ExpansionPanelDetails>
             </ExpansionPanel>
           )
