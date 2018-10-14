@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { navigateTo } from "gatsby-link";
+import { navigate } from 'gatsby'
 import TextField from '@material-ui/core/TextField';
 import { css } from 'react-emotion';
 import validator from 'validator';
@@ -42,7 +42,7 @@ class ContactForm extends Component {
         ...this.state
       })
     })
-      .then(() => navigateTo(FORM_ACTION))
+      .then(() => navigate(FORM_ACTION))
       .catch(error => alert(error));
   };
 
@@ -70,7 +70,7 @@ class ContactForm extends Component {
         data-netlify-honeypot="bot-field"
         style={{ padding: 20 }}
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value={FORM_NAME} />
         <p hidden>
           <label>
             Don’t fill this out:{" "}
