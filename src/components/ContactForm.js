@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
-import { navigate } from 'gatsby'
 import TextField from '@material-ui/core/TextField';
 import { css } from 'react-emotion';
 import validator from 'validator';
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
 
 import { Button } from './shared';
 
 const inputStyle = css({
   margin: '10px 0',
 })
-
-const FORM_NAME = 'contact';
-const FORM_ACTION = `/${FORM_NAME}`;
 
 class ContactForm extends Component {
   state = {
@@ -29,27 +19,6 @@ class ContactForm extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-    const body = encode({
-      'form-name': FORM_NAME,
-      ...this.state
-    });
-    console.log({ body });
-    fetch('/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body,
-    })
-      .then((res) => {
-        console.log({ res })
-        // navigate(FORM_ACTION)
-      })
-      .catch(error => alert(error));
   };
 
   render() {
@@ -73,7 +42,6 @@ class ContactForm extends Component {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
       >
       <input type="hidden" name="bot-field" />
   
@@ -133,7 +101,6 @@ class ContactForm extends Component {
           <Button
             disabled={!formValid}
             type="submit"
-            // onClick={this.handleSubmit}
           />
         </div>
       </form>
