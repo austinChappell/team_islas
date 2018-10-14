@@ -4,6 +4,7 @@ import BioCard from '../components/BioCard';
 import BioCard2 from '../components/BioCard2';
 import ContactForm from '../components/ContactForm';
 import Layout from '../components/layout';
+import UncontrolledContactForm from '../components/UncontrolledContactForm';
 
 import { Container, Flex } from '../components/shared';
 
@@ -28,7 +29,8 @@ const AboutPage = () => (
         ))}
       </Flex>
 
-      <ContactForm />
+      {/* <ContactForm /> */}
+      <UncontrolledContactForm />
     </Container>
   </Layout>
 );
