@@ -6,10 +6,13 @@ import validator from 'validator';
 import {
   Button,
   Heading3,
+  Flex,
 } from './shared';
 
 const inputStyle = css({
-  margin: '10px 0',
+  flexBasis: '40%',
+  margin: 10,
+  minWidth: 300,
 })
 
 class ContactForm extends Component {
@@ -54,7 +57,11 @@ class ContactForm extends Component {
           data-netlify-honeypot="bot-field"
         >
         <input type="hidden" name="bot-field" />
-    
+
+        <Flex
+          flexWrap="wrap"
+          justifyContent="center"
+        >
           <TextField
             className={inputStyle}
             id="name"
@@ -79,7 +86,9 @@ class ContactForm extends Component {
             value={email}
             variant="outlined"
           />
+        </Flex>
 
+        <Flex justifyContent="center">
           <TextField
             className={inputStyle}
             id="phone"
@@ -106,6 +115,8 @@ class ContactForm extends Component {
             value={message}
             variant="outlined"
           />
+        </Flex>
+    
 
           <div style={{ textAlign: 'center', margin: 10 }}>
             <Button

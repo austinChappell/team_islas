@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from 'react-emotion';
 
-import ReactPlayer from 'react-player';
 import Layout from '../components/layout';
 
 import {
