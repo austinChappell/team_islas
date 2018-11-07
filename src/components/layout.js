@@ -9,7 +9,11 @@ import './layout.css';
 
 const NAVBAR_HEIGHT = 60;
 
-const Layout = ({ children }) => (
+const Layout = ({
+  children,
+  className = '',
+  overlayColor = '#00000000',
+}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -43,12 +47,20 @@ const Layout = ({ children }) => (
             siteTitle={data.site.siteMetadata.title}
           />
           <div
+            className={className}
             style={{
               flexGrow: 1,
               paddingTop: NAVBAR_HEIGHT,
+              position: 'relative',
             }}
           >
-            {children}
+            <div
+              style={{
+                backgroundColor: overlayColor,
+              }}
+            >
+              {children}
+            </div>
           </div>
           <Footer />
         </div>
@@ -59,6 +71,8 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  overlayColor: PropTypes.string,
 };
 
 export default Layout;

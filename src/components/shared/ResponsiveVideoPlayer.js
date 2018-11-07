@@ -3,12 +3,18 @@ import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
 
 const propTypes = {
+  className: PropTypes.string,
   url: PropTypes.string.isRequired,
 };
 
-const ResponsiveVideoPlayer = ({ url }) => (
+const ResponsiveVideoPlayer = ({
+  className = '',
+  url,
+}) => (
   <div
+    className={className}
     style={{
+      boxSizing: 'border-box',
       position: 'relative',
       paddingTop: '56.25%',
       flexGrow: 1,
