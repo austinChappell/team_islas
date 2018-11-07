@@ -34,7 +34,6 @@ const SuperHandsPage = () => (
         <Button
           buttonText="Buy Now!"
           href="http://www.lulu.com/shop/doug-bush/super-hands/paperback/product-23195361.html#pageProduct"
-          style={{ backgroundColor: '#ff0000' }}
           variant="contained"
         />
       </ButtonWrapper>
@@ -53,7 +52,6 @@ const SuperHandsPage = () => (
         <Button
           buttonText="Buy Now!"
           href="http://www.lulu.com/shop/doug-bush/super-hands/paperback/product-23195361.html#pageProduct"
-          style={{ backgroundColor: '#ff0000' }}
           variant="contained"
         />
       </ButtonWrapper>
