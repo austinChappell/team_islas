@@ -9,11 +9,11 @@ import {
   Flex,
 } from './shared';
 
-const inputStyle = css({
+const inputWrapper = css({
   flexBasis: '40%',
-  margin: 10,
+  margin: '0 10px',
   minWidth: 300,
-})
+});
 
 class ContactForm extends Component {
   state = {
@@ -62,59 +62,64 @@ class ContactForm extends Component {
           flexWrap="wrap"
           justifyContent="center"
         >
-          <TextField
-            className={inputStyle}
-            id="name"
-            fullWidth
-            label="Name"
-            margin="normal"
-            name="name"
-            onChange={this.handleChange}
-            value={name}
-            variant="outlined"
-          />
+          <div className={inputWrapper}>
+            <TextField
+              id="name"
+              fullWidth
+              label="Name"
+              margin="normal"
+              name="name"
+              onChange={this.handleChange}
+              value={name}
+              variant="outlined"
+            />
+          </div>
 
-          <TextField
-            className={inputStyle}
-            id="email"
-            fullWidth
-            label="Email"
-            margin="normal"
-            name="email"
-            onChange={this.handleChange}
-            type="email"
-            value={email}
-            variant="outlined"
-          />
+          <div className={inputWrapper}>
+            <TextField
+              id="email"
+              fullWidth
+              label="Email"
+              margin="normal"
+              name="email"
+              onChange={this.handleChange}
+              type="email"
+              value={email}
+              variant="outlined"
+            />
+          </div>
         </Flex>
 
         <Flex justifyContent="center">
-          <TextField
-            className={inputStyle}
-            id="phone"
-            fullWidth
-            label="Phone"
-            margin="normal"
-            name="phone"
-            onChange={this.handleChange}
-            type="tel"
-            value={phone}
-            variant="outlined"
-          />
 
-          <TextField
-            className={inputStyle}
-            id="message"
-            fullWidth
-            label="Message"
-            margin="normal"
-            multiline
-            name="message"
-            onChange={this.handleChange}
-            rowsMax="4"
-            value={message}
-            variant="outlined"
-          />
+          <div className={inputWrapper}>
+            <TextField
+              id="phone"
+              fullWidth
+              label="Phone"
+              margin="normal"
+              name="phone"
+              onChange={this.handleChange}
+              type="tel"
+              value={phone}
+              variant="outlined"
+            />
+          </div>
+
+          <div className={inputWrapper}>
+            <TextField
+              id="message"
+              fullWidth
+              label="Message"
+              margin="normal"
+              multiline
+              name="message"
+              onChange={this.handleChange}
+              rowsMax="4"
+              value={message}
+              variant="outlined"
+            />
+          </div>
         </Flex>
     
 
