@@ -4,6 +4,7 @@ export {
   SUPER_HANDS_VIDS,
 } from './super_hands';
 export {
+  MASTER_HANDS_INTRO,
   MASTER_HANDS_QUOTES,
   MASTER_HANDS_VIDS,
 } from './master_hands';

@@ -11,6 +11,11 @@ import SatherPhoto from '../images/quotes/cameron-sather.jpg';
 import PazPhoto from '../images/quotes/roberto-paz.jpg';
 import BrooksPhoto from '../images/quotes/jordan-brooks.jpg';
 
+export const MASTER_HANDS_INTRO = [
+  'Master Hands is a collection of intermediate to advanced exercises and etudes meant to increase the control, flow and contrast of ones playing.',
+  'As a young percussionist, one of my most profound experiences was working through the book Master Studies by the late jazz legend Joe Morello. I have since worked through this book countless times and it has helped to plug the gaps between my drum set and rudimental playing. Many of the concepts presented in Master Hands are extensions of the concepts presented in Master Studies, and are further influenced by my experiences on drum set and marching / teaching drum corps. I highly recommend playing through Master Studies before playing through Master Hands. Pay special attention to the preface of Master Studies where Joe gives his thoughts on technique and use of the metronome. These words are just as true today as they were when he originally penned them in 1983.',
+];
+
 export const MASTER_HANDS_QUOTES = [
   {
     name: 'Cameron Sather',

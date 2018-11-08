@@ -13,6 +13,7 @@ import {
 } from '../components/shared';
 
 import {
+  MASTER_HANDS_INTRO,
   MASTER_HANDS_QUOTES,
   MASTER_HANDS_VIDS,
 } from '../data';
@@ -32,6 +33,21 @@ const SuperHandsPage = () => (
       image={MasterHandsBanner}
     />
     <Container>
+
+      <h2 style={{ marginBottom: 20, marginTop: 40, textAlign: 'center' }}>
+        Intro
+      </h2>
+
+
+      {MASTER_HANDS_INTRO.map((para, index) => (
+        <p
+          key={index}
+          style={{ margin: 10 }}
+        >
+          {para}
+        </p>
+      ))}
+
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
@@ -39,6 +55,10 @@ const SuperHandsPage = () => (
           variant="contained"
         />
       </ButtonWrapper>
+
+      <h2 style={{ marginBottom: 20, marginTop: 40, textAlign: 'center' }}>
+        Videos
+      </h2>
 
       <VideoList videos={MASTER_HANDS_VIDS} />
 
