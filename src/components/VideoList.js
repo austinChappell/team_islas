@@ -31,8 +31,16 @@ const styles = () => ({
   }
 });
 
+const detailsWrapper = css({
+  display: 'flex',
+  flexWrap: 'wrap',
+})
+
 const videoWrapper = css({
   flexBasis: 150,
+  flexGrow: 1,
+  maxWidth: 250,
+  padding: 10,
 });
 
 const videoDescriptionWrapper = css({
@@ -146,21 +154,23 @@ class VideoList extends Component {
                 </Heading5>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
-                <div
-                  className={videoWrapper}
-                  onClick={() => this.loadVideo(vid)}
-                >
-                  <img
-                    height={100}
-                    width={140}
-                    src={`https://img.youtube.com/vi/${vid.youtubeId}/0.jpg`}
-                  />
-                </div>
+                <div className={detailsWrapper}>
+                  <div
+                    className={videoWrapper}
+                    onClick={() => this.loadVideo(vid)}
+                  >
+                    <img
+                      // height={100}
+                      // width={140}
+                      src={`https://img.youtube.com/vi/${vid.youtubeId}/0.jpg`}
+                    />
+                  </div>
 
-                <div className={videoDescriptionWrapper}>
-                  <LargeBody>
-                    {vid.description}
-                  </LargeBody>
+                  <div className={videoDescriptionWrapper}>
+                    <LargeBody>
+                      {vid.description}
+                    </LargeBody>
+                  </div>
                 </div>
               </ExpansionPanelDetails>
             </ExpansionPanel>

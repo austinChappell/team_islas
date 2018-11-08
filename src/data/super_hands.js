@@ -4,6 +4,12 @@ import ProsperiePhoto from '../images/quotes/jeff-prosperie.jpg';
 import ScheerPhoto from '../images/quotes/zach-scheer.jpg';
 import WeberPhoto from '../images/quotes/paul-weber.jpg';
 
+export const SUPER_HANDS_INTRO = [
+  'Super Hands is a collection of exercises, etudes, and solos for the intermediate to advanced rudimental percussionist.',
+  'Before each exercise there are a few short descriptions of goals that pertain to that exercise. Make sure to read these before attempting to play so you know what it is you are trying to accomplish. Many of the exercises are meant to be practiced with several variations. Try using multiple dynamics, different stickings, playing the exercise backwards or playing with just your weak hand.',
+  'Performance Etudes are found at the end of each chapter and are not meant to be sight read. They are short musical examples meant to help transfer the skills you are developing to a more musical context. They are also meant to prepare you for the solos in the back of the book. Take your time with these and make sure you can play them confidently.',
+];
+
 export const SUPER_HANDS_QUOTES = [
   {
     name: 'Jeff Ausdemore',
@@ -39,7 +45,7 @@ export const SUPER_HANDS_QUOTES = [
 
 export const SUPER_HANDS_VIDS = [
   {
-    description: 'Jam in 58 - Jam in 58 is based off of a 50 beat 8th note pulse theme that is felt 3+3+2+2+2+3+3+2+2+2+3+3+2+2+2+2+2+3+2+2+3 (Yay math!).  At B your right hand will play this exact accent pattern on the rim. Notice at B the dynamic is mezzo piano (mp). This section should have a light drum and bass - type feel.',
+    description: 'Jam in 58 - Jam in 58 is based off of a 50 beat 8th note pulse theme that is felt 3 + 3 + 2 + 2 + 2 + 3 + 3 + 2 + 2 + 2 + 3 + 3 + 2 + 2 + 2 + 2 + 2 + 3 + 2 + 2 + 3 (Yay math!).  At B your right hand will play this exact accent pattern on the rim. Notice at B the dynamic is mezzo piano (mp). This section should have a light drum and bass - type feel.',
     title: 'Jam in 5/8',
     youtubeId: 'uTO0KbZJ05E',
   },

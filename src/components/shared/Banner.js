@@ -10,7 +10,7 @@ const Banner = ({ image }) => (
     style={{
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
-      height: 300,
+      height: '33vw',
       width: '100vw',
     }}
   />

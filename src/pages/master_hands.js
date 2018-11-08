@@ -34,10 +34,11 @@ const SuperHandsPage = () => (
     />
     <Container>
 
-      <h2 style={{ marginBottom: 20, marginTop: 40, textAlign: 'center' }}>
-        Intro
-      </h2>
-
+      <div style={{ margin: 20, textAlign: 'center' }}>
+        <Heading3>
+          Intro
+        </Heading3>
+      </div>
 
       {MASTER_HANDS_INTRO.map((para, index) => (
         <p
@@ -56,9 +57,11 @@ const SuperHandsPage = () => (
         />
       </ButtonWrapper>
 
-      <h2 style={{ marginBottom: 20, marginTop: 40, textAlign: 'center' }}>
-        Videos
-      </h2>
+      <div style={{ margin: 20, textAlign: 'center' }}>
+        <Heading3>
+          Videos
+        </Heading3>
+      </div>
 
       <VideoList videos={MASTER_HANDS_VIDS} />
 

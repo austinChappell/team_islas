@@ -1,5 +1,6 @@
 export { BIOS } from './bios';
 export {
+  SUPER_HANDS_INTRO,
   SUPER_HANDS_QUOTES,
   SUPER_HANDS_VIDS,
 } from './super_hands';
