@@ -53,7 +53,7 @@ const Layout = ({
             <div
               style={{
                 backgroundColor: overlayColor,
-                paddingTop: '80px',
+                paddingTop: '50px',
               }}
             >
               {children}

@@ -6,7 +6,7 @@ const Container = ({ children, style, ...props }) => (
       margin: '0 auto',
       maxWidth: 960,
       outline: 'none',
-      padding: '20px 1.0875rem',
+      padding: '5px 1.0875rem',
       width: '95%',
       ...style,
     }}
