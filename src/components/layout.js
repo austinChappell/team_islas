@@ -42,21 +42,18 @@ const Layout = ({
             minHeight: '100vh',
           }}
         >
-          <Header
-            height={NAVBAR_HEIGHT}
-            siteTitle={data.site.siteMetadata.title}
-          />
+          <Header siteTitle={data.site.siteMetadata.title} />
           <div
             className={className}
             style={{
               flexGrow: 1,
-              paddingTop: `${NAVBAR_HEIGHT}px`,
               position: 'relative',
             }}
           >
             <div
               style={{
                 backgroundColor: overlayColor,
+                paddingTop: '80px',
               }}
             >
               {children}

@@ -81,16 +81,12 @@ class Header extends Component {
   }
 
   render() {
-    const {
-      height,
-      siteTitle,
-    } = this.props;
+    const { siteTitle } = this.props;
 
     return (
       <Flex
         style={{
           background: COLORS.PRIMARY_1,
-          height: `${height}px`,
           position: 'fixed',
           top: 0,
           left: 0,
@@ -111,7 +107,7 @@ class Header extends Component {
               >
                 <img
                   alt={siteTitle}
-                  height={`${height * 0.8}px`}
+                  height="40px"
                   src={TeamIslasLogo}
                 />
               </Link>
