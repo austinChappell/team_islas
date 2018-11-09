@@ -17,6 +17,7 @@ const formStyle = css({
 
 const inputWrapper = css({
   flexBasis: '40%',
+  margin: '10px',
   marginLeft: '10px',
   marginRight: '10px',
   minWidth: 300,
