@@ -9,9 +9,15 @@ import {
   Flex,
 } from './shared';
 
+const formStyle = css({
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+});
+
 const inputWrapper = css({
   flexBasis: '40%',
-  margin: '0 10px',
+  margin: '10px',
   minWidth: 300,
 });
 
@@ -51,79 +57,64 @@ class ContactForm extends Component {
         </div>
 
         <form
+          className={formStyle}
           name="contact"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-        <input type="hidden" name="bot-field" />
+          <input type="hidden" name="bot-field" />
 
-        <Flex
-          flexWrap="wrap"
-          justifyContent="center"
-        >
-          <div className={inputWrapper}>
-            <TextField
-              id="name"
-              fullWidth
-              label="Name"
-              margin="normal"
-              name="name"
-              onChange={this.handleChange}
-              value={name}
-              variant="outlined"
-            />
-          </div>
+          <TextField
+            className={inputWrapper}
+            id="name"
+            fullWidth
+            label="Name"
+            margin="normal"
+            name="name"
+            onChange={this.handleChange}
+            value={name}
+            variant="outlined"
+          />
+          <TextField
+            className={inputWrapper}
+            id="email"
+            fullWidth
+            label="Email"
+            margin="normal"
+            name="email"
+            onChange={this.handleChange}
+            type="email"
+            value={email}
+            variant="outlined"
+          />
+          <TextField
+            className={inputWrapper}
+            id="phone"
+            fullWidth
+            label="Phone"
+            margin="normal"
+            name="phone"
+            onChange={this.handleChange}
+            type="tel"
+            value={phone}
+            variant="outlined"
+          />
+          <TextField
+            className={inputWrapper}
+            id="message"
+            fullWidth
+            label="Message"
+            margin="normal"
+            multiline
+            name="message"
+            onChange={this.handleChange}
+            rowsMax="4"
+            value={message}
+            variant="outlined"
+          />
 
-          <div className={inputWrapper}>
-            <TextField
-              id="email"
-              fullWidth
-              label="Email"
-              margin="normal"
-              name="email"
-              onChange={this.handleChange}
-              type="email"
-              value={email}
-              variant="outlined"
-            />
-          </div>
-        </Flex>
-
-        <Flex justifyContent="center">
-
-          <div className={inputWrapper}>
-            <TextField
-              id="phone"
-              fullWidth
-              label="Phone"
-              margin="normal"
-              name="phone"
-              onChange={this.handleChange}
-              type="tel"
-              value={phone}
-              variant="outlined"
-            />
-          </div>
-
-          <div className={inputWrapper}>
-            <TextField
-              id="message"
-              fullWidth
-              label="Message"
-              margin="normal"
-              multiline
-              name="message"
-              onChange={this.handleChange}
-              rowsMax="4"
-              value={message}
-              variant="outlined"
-            />
-          </div>
-        </Flex>
-    
-
-          <div style={{ textAlign: 'center', margin: '10px' }}>
+          <div style={{ flexBasis: '100%', textAlign: 'center', margin: '10px' }}>
             <Button
               disabled={!formValid}
               type="submit"
