@@ -7,7 +7,7 @@ const Card = ({ children }) => (
       display: 'flex',
       flexDirection: 'column',
       overflow: 'hidden',
-      padding: 40,
+      padding: '40px',
       position: 'relative',
       borderRadius: 20,
       border: `1px solid ${COLORS.DISABLED}`,
@@ -15,6 +15,6 @@ const Card = ({ children }) => (
   >
     {children}
   </div>
-)
+);
 
 export default Card;

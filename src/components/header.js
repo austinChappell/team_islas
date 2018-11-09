@@ -35,7 +35,6 @@ const SUB_MENU_ITEMS = [
 class Header extends Component {
   state = {
     anchorEl: null,
-    subMenuOpen: false,
   }
 
   handleClick = event => {
@@ -82,14 +81,16 @@ class Header extends Component {
   }
 
   render() {
-    const { subMenuOpen } = this.state;
-    const { height, siteTitle } = this.props;
+    const {
+      height,
+      siteTitle,
+    } = this.props;
 
     return (
       <Flex
         style={{
           background: COLORS.PRIMARY_1,
-          height,
+          height: `${height}px`,
           position: 'fixed',
           top: 0,
           left: 0,
@@ -109,10 +110,10 @@ class Header extends Component {
                 }}
               >
                 <img
-                  height={height * 0.8}
+                  alt={siteTitle}
+                  height={`${height * 0.8}px`}
                   src={TeamIslasLogo}
                 />
-                {/* {siteTitle} */}
               </Link>
             </Heading2>
             {this.renderSub()}

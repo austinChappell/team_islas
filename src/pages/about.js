@@ -19,7 +19,7 @@ const AboutPage = () => (
           <div
             key={index}
             style={{
-              margin: 15,
+              margin: '15px',
             }}
           >
             <BioCard2 user={bio} />

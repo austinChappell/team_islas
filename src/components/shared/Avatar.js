@@ -10,6 +10,7 @@ const Avatar = ({
     src={src}
     style={{
       borderRadius: '50%',
+      boxShadow: '2px 2px 8px #999999',
       height: size,
       width: size,
     }}

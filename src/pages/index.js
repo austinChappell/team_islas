@@ -74,7 +74,7 @@ class IndexPage extends Component {
           ref={el => this.modalWrapper = el}
           style={{
             backgroundColor: 'white',
-            padding: 10,
+            padding: '10px',
             margin: '0 auto',
           }}
         >

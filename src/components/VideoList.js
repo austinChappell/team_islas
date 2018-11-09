@@ -37,10 +37,10 @@ const detailsWrapper = css({
 })
 
 const videoWrapper = css({
-  flexBasis: 150,
+  flexBasis: '150px',
   flexGrow: 1,
-  maxWidth: 250,
-  padding: 10,
+  maxWidth: '250px',
+  padding: '10px',
 });
 
 const videoDescriptionWrapper = css({
@@ -115,7 +115,7 @@ class VideoList extends Component {
             ref={el => this.modalWrapper = el}
             style={{
               backgroundColor: 'white',
-              padding: 10,
+              padding: '10px',
               margin: '0 auto',
             }}
           >

@@ -50,7 +50,7 @@ const Layout = ({
             className={className}
             style={{
               flexGrow: 1,
-              paddingTop: NAVBAR_HEIGHT,
+              paddingTop: `${NAVBAR_HEIGHT}px`,
               position: 'relative',
             }}
           >

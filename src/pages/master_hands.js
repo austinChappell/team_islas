@@ -34,7 +34,7 @@ const SuperHandsPage = () => (
     />
     <Container>
 
-      <div style={{ margin: 20, textAlign: 'center' }}>
+      <div style={{ margin: '20px', textAlign: 'center' }}>
         <Heading3>
           Intro
         </Heading3>
@@ -43,7 +43,7 @@ const SuperHandsPage = () => (
       {MASTER_HANDS_INTRO.map((para, index) => (
         <p
           key={index}
-          style={{ margin: 10 }}
+          style={{ margin: '10px' }}
         >
           {para}
         </p>
@@ -57,7 +57,7 @@ const SuperHandsPage = () => (
         />
       </ButtonWrapper>
 
-      <div style={{ margin: 20, textAlign: 'center' }}>
+      <div style={{ margin: '20px', textAlign: 'center' }}>
         <Heading3>
           Videos
         </Heading3>
@@ -65,7 +65,7 @@ const SuperHandsPage = () => (
 
       <VideoList videos={MASTER_HANDS_VIDS} />
 
-      <div style={{ margin: 20, textAlign: 'center' }}>
+      <div style={{ margin: '20px', textAlign: 'center' }}>
         <Heading3>
           What others are saying...
         </Heading3>

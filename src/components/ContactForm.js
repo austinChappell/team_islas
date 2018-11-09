@@ -123,7 +123,7 @@ class ContactForm extends Component {
         </Flex>
     
 
-          <div style={{ textAlign: 'center', margin: 10 }}>
+          <div style={{ textAlign: 'center', margin: '10px' }}>
             <Button
               disabled={!formValid}
               type="submit"

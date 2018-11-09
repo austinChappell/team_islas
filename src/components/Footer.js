@@ -16,7 +16,7 @@ class Footer extends Component {
       <div
         style={{
           backgroundColor: COLORS.PRIMARY_2,
-          padding: 5,
+          padding: '5px',
         }}
       >
         <Container>
@@ -58,7 +58,7 @@ class Footer extends Component {
       <div
         style={{
           backgroundColor: COLORS.PRIMARY_1,
-          padding: 10,
+          padding: '10px',
         }}
       >
         <Container>
@@ -91,7 +91,7 @@ class Footer extends Component {
                   <li
                     key={index}
                     style={{
-                      margin: 5,
+                      margin: '5px',
                     }}
                   >
                     <a href={href} target="_blank">
