@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
-import { css } from 'react-emotion';
 import validator from 'validator';
+import { withStyles } from '@material-ui/core/styles'
 
 import {
   Button,
   Heading3,
-  Flex,
 } from './shared';
 
-const formStyle = css({
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-});
-
-const inputWrapper = css({
-  flexBasis: '40%',
-  margin: '10px',
-  marginLeft: '10px',
-  marginRight: '10px',
-  minWidth: 300,
-});
+const styles = () => ({
+  form: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  input: {
+    flexBasis: '40%',
+    margin: '10px',
+    marginLeft: '10px',
+    marginRight: '10px',
+    minWidth: 300,
+  }
+})
 
 class ContactForm extends Component {
   state = {
@@ -42,6 +42,7 @@ class ContactForm extends Component {
       name,
       phone,
     } = this.state;
+    const { classes } = this.props;
 
     const emailValid = validator.isEmail(email);
     const messageValid = validator.isLength(message.trim(), { min: 5 });
@@ -59,7 +60,7 @@ class ContactForm extends Component {
         </div>
 
         <form
-          className={formStyle}
+          className={classes.form}
           name="contact"
           method="post"
           data-netlify="true"
@@ -68,7 +69,7 @@ class ContactForm extends Component {
           <input type="hidden" name="bot-field" />
 
           <TextField
-            className={inputWrapper}
+            className={classes.input}
             id="name"
             fullWidth
             label="Name"
@@ -79,7 +80,7 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={inputWrapper}
+            className={classes.input}
             id="email"
             fullWidth
             label="Email"
@@ -91,7 +92,7 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={inputWrapper}
+            className={classes.input}
             id="phone"
             fullWidth
             label="Phone"
@@ -103,7 +104,7 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={inputWrapper}
+            className={classes.input}
             id="message"
             fullWidth
             label="Message"
@@ -128,4 +129,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default withStyles(styles)(ContactForm);
