@@ -116,55 +116,6 @@ class ContactForm extends Component {
             </label>
           </p>
 
-          {/* <StyledInputWrapper>
-            <StyledLabel>
-              Name
-            </StyledLabel>
-            
-            <StyledInput
-              name="name"
-              onChange={(e) => this.handleChange(e)}
-              value={name}
-            />
-          </StyledInputWrapper>
-
-          <StyledInputWrapper>
-            <StyledLabel>
-              Email
-            </StyledLabel>
-            
-            <StyledInput
-              name="email"
-              onChange={(e) => this.handleChange(e)}
-              value={email}
-            />
-          </StyledInputWrapper>
-
-          <StyledInputWrapper>
-            <StyledLabel>
-              Phone
-            </StyledLabel>
-            
-            <StyledInput
-              name="phone"
-              onChange={(e) => this.handleChange(e)}
-              value={phone}
-            />
-          </StyledInputWrapper>
-
-          <StyledInputWrapper>
-            <StyledLabel>
-              Message
-            </StyledLabel>
-            
-            <StyledTextArea
-              name="message"
-              onChange={(e) => this.handleChange(e)}
-              rows={1}
-              value={message}
-            />
-          </StyledInputWrapper> */}
-
           <TextField
             className={classes.input}
             fullWidth

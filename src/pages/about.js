@@ -2,7 +2,6 @@ import React from 'react';
 
 import BioCard2 from '../components/BioCard2';
 import ContactForm from '../components/ContactForm';
-import ContactForm2 from '../components/ContactForm2';
 import Layout from '../components/layout';
 
 import { Container, Flex } from '../components/shared';
