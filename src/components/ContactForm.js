@@ -20,10 +20,6 @@ const styles = () => ({
     marginLeft: '10px',
     marginRight: '10px',
     minWidth: 300,
-  },
-  submit: {
-    flexBasis: '20%',
-    margin: '10px 0',
   }
 })
 
@@ -72,7 +68,61 @@ class ContactForm extends Component {
         >
           <input type="hidden" name="bot-field" />
 
-          <TextField
+          <p>
+            <label>
+              Name
+            </label>
+            
+            <input
+              id="name"
+              name="name"
+              onChange={(e) => this.handleChange(e)}
+              value={name}
+            />
+          </p>
+
+          <p>
+            <label>
+              Email
+            </label>
+            
+            <input
+              id="email"
+              name="email"
+              onChange={(e) => this.handleChange(e)}
+              type="email"
+              value={email}
+            />
+          </p>
+
+          <p>
+            <label>
+              Phone
+            </label>
+            
+            <input
+              id="phone"
+              name="phone"
+              onChange={(e) => this.handleChange(e)}
+              type="tel"
+              value={phone}
+            />
+          </p>
+
+          <p>
+            <label>
+              Message
+            </label>
+            
+            <textarea
+              id="message"
+              name="message"
+              onChange={(e) => this.handleChange(e)}
+              value={message}
+            />
+          </p>
+
+          {/* <TextField
             className={classes.input}
             id="name"
             fullWidth
@@ -82,8 +132,8 @@ class ContactForm extends Component {
             onChange={this.handleChange}
             value={name}
             variant="outlined"
-          />
-          <TextField
+          /> */}
+          {/* <TextField
             className={classes.input}
             id="email"
             fullWidth
@@ -94,8 +144,8 @@ class ContactForm extends Component {
             type="email"
             value={email}
             variant="outlined"
-          />
-          <TextField
+          /> */}
+          {/* <TextField
             className={classes.input}
             id="phone"
             fullWidth
@@ -106,8 +156,8 @@ class ContactForm extends Component {
             type="tel"
             value={phone}
             variant="outlined"
-          />
-          <TextField
+          /> */}
+          {/* <TextField
             className={classes.input}
             id="message"
             fullWidth
@@ -119,17 +169,14 @@ class ContactForm extends Component {
             rowsMax="4"
             value={message}
             variant="outlined"
-          />
+          /> */}
 
-          <button
-            className={classes.submit}
-            disabled={!formValid}
-            fullWidth
-            // style={{ flexBasis: '100%', textAlign: 'center', margin: '10px', width: '100%' }}
-            type="submit"
-          >
-            Send
-          </button>
+          <div style={{ flexBasis: '100%', textAlign: 'center', margin: '10px' }}>
+            <Button
+              disabled={!formValid}
+              type="submit"
+            />
+          </div>
         </form>
       </div>
     )
