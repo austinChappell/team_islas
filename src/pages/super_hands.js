@@ -21,7 +21,7 @@ import {
 import SuperHandsBanner from '../images/super-hands-banner.jpg';
 
 const ButtonWrapper = styled('div')`
-  margin: 10px;
+  margin: 50px;
   text-align: center;
 `;
 
@@ -32,20 +32,16 @@ const SuperHandsPage = () => (
     />
     <Container>
 
-      <div style={{ margin: '20px', textAlign: 'center' }}>
-        <Heading3>
-          Intro
-        </Heading3>
-      </div>
-
-      {SUPER_HANDS_INTRO.map((para, index) => (
-        <p
-          key={index}
-          style={{ margin: '10px' }}
-        >
-          {para}
-        </p>
-      ))}
+      <section style={{ marginTop: 40 }}>
+        {SUPER_HANDS_INTRO.map((para, index) => (
+          <p
+            key={index}
+            style={{ margin: '10px' }}
+          >
+            {para}
+          </p>
+        ))}
+      </section>
 
       <ButtonWrapper>
         <Button
@@ -55,9 +51,9 @@ const SuperHandsPage = () => (
         />
       </ButtonWrapper>
 
-      <div style={{ margin: '20px', textAlign: 'center' }}>
+      <div style={{ marginTop: 20, textAlign: 'center' }}>
         <Heading3>
-          Videos
+          Watch
         </Heading3>
       </div>
 

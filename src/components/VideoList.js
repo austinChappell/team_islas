@@ -22,6 +22,7 @@ import {
 const styles = () => ({
   root: {
     marginBottom: 60,
+    marginTop: 20,
     width: '100%',
   },
   modal: {
@@ -138,16 +139,22 @@ class VideoList extends Component {
       videos,
     } = this.props;
 
+    const oneVideo = videos.length === 1;
+
     return (
       <div
         className={classes.root}
         ref={el => this.vidListContainer = el}
       >
         {videos.map((vid, index) => {
+          const expansionProps = {};
+          if (oneVideo) {
+            expansionProps.expanded = true;
+          }
           return (
-            <ExpansionPanel key={index}>
+            <ExpansionPanel key={index} {...expansionProps}>
               <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={!oneVideo && <ExpandMoreIcon />}
               >
                 <Heading5>
                   {vid.title}
@@ -160,8 +167,6 @@ class VideoList extends Component {
                     onClick={() => this.loadVideo(vid)}
                   >
                     <img
-                      // height={100}
-                      // width={140}
                       src={`https://img.youtube.com/vi/${vid.youtubeId}/0.jpg`}
                     />
                   </div>

@@ -61,11 +61,11 @@ class IndexPage extends Component {
 
     return (
       <Layout
-      className={homeLayout}
-      overlayColor="rgba(0, 0, 0, 0.5)"
-    >
+        className={homeLayout}
+        overlayColor="rgba(0, 0, 0, 0.5)"
+      >
       <Container>
-        <div>
+        <div style={{ margin: 15 }}>
           <Heading1 light>
             New Album Coming Soon!
           </Heading1>
