@@ -116,7 +116,7 @@ class ContactForm extends Component {
             </label>
           </p>
 
-          <StyledInputWrapper>
+          {/* <StyledInputWrapper>
             <StyledLabel>
               Name
             </StyledLabel>
@@ -163,11 +163,10 @@ class ContactForm extends Component {
               rows={1}
               value={message}
             />
-          </StyledInputWrapper>
+          </StyledInputWrapper> */}
 
-          {/* <TextField
+          <TextField
             className={classes.input}
-            id="name"
             fullWidth
             label="Name"
             margin="normal"
@@ -175,34 +174,29 @@ class ContactForm extends Component {
             onChange={this.handleChange}
             value={name}
             variant="outlined"
-          /> */}
-          {/* <TextField
+          />
+          <TextField
             className={classes.input}
-            id="email"
             fullWidth
             label="Email"
             margin="normal"
             name="email"
             onChange={this.handleChange}
-            type="email"
             value={email}
             variant="outlined"
-          /> */}
-          {/* <TextField
+          />
+          <TextField
             className={classes.input}
-            id="phone"
             fullWidth
             label="Phone"
             margin="normal"
             name="phone"
             onChange={this.handleChange}
-            type="tel"
             value={phone}
             variant="outlined"
-          /> */}
-          {/* <TextField
+          />
+          <TextField
             className={classes.input}
-            id="message"
             fullWidth
             label="Message"
             margin="normal"
@@ -212,7 +206,7 @@ class ContactForm extends Component {
             rowsMax="4"
             value={message}
             variant="outlined"
-          /> */}
+          />
 
           <div style={{ flexBasis: '100%', textAlign: 'center', margin: '10px' }}>
             <Button
