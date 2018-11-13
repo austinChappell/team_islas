@@ -116,7 +116,7 @@ class ContactForm extends Component {
             </label>
           </p>
 
-          <StyledInputWrapper>
+          {/* <StyledInputWrapper>
             <StyledLabel>
               Name
             </StyledLabel>
@@ -163,9 +163,9 @@ class ContactForm extends Component {
               rows={1}
               value={message}
             />
-          </StyledInputWrapper>
+          </StyledInputWrapper> */}
 
-          {/* <TextField
+          <TextField
             className={classes.input}
             id="name"
             fullWidth
@@ -175,8 +175,8 @@ class ContactForm extends Component {
             onChange={this.handleChange}
             value={name}
             variant="outlined"
-          /> */}
-          {/* <TextField
+          />
+          <TextField
             className={classes.input}
             id="email"
             fullWidth
@@ -187,8 +187,8 @@ class ContactForm extends Component {
             type="email"
             value={email}
             variant="outlined"
-          /> */}
-          {/* <TextField
+          />
+          <TextField
             className={classes.input}
             id="phone"
             fullWidth
@@ -199,8 +199,8 @@ class ContactForm extends Component {
             type="tel"
             value={phone}
             variant="outlined"
-          /> */}
-          {/* <TextField
+          />
+          <TextField
             className={classes.input}
             id="message"
             fullWidth
@@ -212,7 +212,7 @@ class ContactForm extends Component {
             rowsMax="4"
             value={message}
             variant="outlined"
-          /> */}
+          />
 
           <div style={{ flexBasis: '100%', textAlign: 'center', margin: '10px' }}>
             <Button
