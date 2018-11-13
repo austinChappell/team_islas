@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import validator from 'validator';
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles';
+import styled from 'react-emotion';
+
+import { COLORS } from '../constants/colors';
 
 import {
   Button,
@@ -21,7 +24,42 @@ const styles = () => ({
     marginRight: '10px',
     minWidth: 300,
   }
-})
+});
+
+const StyledInputWrapper = styled('p')`
+  flex-basis: 40%;
+  margin: 10px;
+  min-width: 300px;
+`;
+
+const StyledLabel = styled('label')`
+  display: block;
+`;
+
+const StyledInput = styled('input')`
+  border: 1px solid ${COLORS.DISABLED};
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  &:focus {
+    border: 1px solid ${COLORS.PRIMARY_1};
+  }
+`;
+
+const StyledTextArea = styled('textarea')`
+  border: 1px solid ${COLORS.DISABLED};
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  &:focus {
+    border: 1px solid ${COLORS.PRIMARY_1};
+  }
+`;
 
 class ContactForm extends Component {
   state = {
@@ -68,59 +106,60 @@ class ContactForm extends Component {
         >
           <input type="hidden" name="bot-field" />
 
-          <p>
-            <label>
+          <StyledInputWrapper>
+            <StyledLabel>
               Name
-            </label>
+            </StyledLabel>
             
-            <input
+            <StyledInput
               id="name"
               name="name"
               onChange={(e) => this.handleChange(e)}
               value={name}
             />
-          </p>
+          </StyledInputWrapper>
 
-          <p>
-            <label>
+          <StyledInputWrapper>
+            <StyledLabel>
               Email
-            </label>
+            </StyledLabel>
             
-            <input
+            <StyledInput
               id="email"
               name="email"
               onChange={(e) => this.handleChange(e)}
               type="email"
               value={email}
             />
-          </p>
+          </StyledInputWrapper>
 
-          <p>
-            <label>
+          <StyledInputWrapper>
+            <StyledLabel>
               Phone
-            </label>
+            </StyledLabel>
             
-            <input
+            <StyledInput
               id="phone"
               name="phone"
               onChange={(e) => this.handleChange(e)}
               type="tel"
               value={phone}
             />
-          </p>
+          </StyledInputWrapper>
 
-          <p>
-            <label>
+          <StyledInputWrapper>
+            <StyledLabel>
               Message
-            </label>
+            </StyledLabel>
             
-            <textarea
+            <StyledTextArea
               id="message"
               name="message"
               onChange={(e) => this.handleChange(e)}
+              rows={1}
               value={message}
             />
-          </p>
+          </StyledInputWrapper>
 
           {/* <TextField
             className={classes.input}
