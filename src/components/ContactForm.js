@@ -167,7 +167,6 @@ class ContactForm extends Component {
 
           <TextField
             className={classes.input}
-            id="name"
             fullWidth
             label="Name"
             margin="normal"
@@ -178,31 +177,26 @@ class ContactForm extends Component {
           />
           <TextField
             className={classes.input}
-            id="email"
             fullWidth
             label="Email"
             margin="normal"
             name="email"
             onChange={this.handleChange}
-            type="email"
             value={email}
             variant="outlined"
           />
           <TextField
             className={classes.input}
-            id="phone"
             fullWidth
             label="Phone"
             margin="normal"
             name="phone"
             onChange={this.handleChange}
-            type="tel"
             value={phone}
             variant="outlined"
           />
           <TextField
             className={classes.input}
-            id="message"
             fullWidth
             label="Message"
             margin="normal"
