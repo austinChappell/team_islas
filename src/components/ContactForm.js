@@ -128,7 +128,6 @@ class ContactForm extends Component {
               id="email"
               name="email"
               onChange={(e) => this.handleChange(e)}
-              type="email"
               value={email}
             />
           </StyledInputWrapper>
@@ -142,7 +141,6 @@ class ContactForm extends Component {
               id="phone"
               name="phone"
               onChange={(e) => this.handleChange(e)}
-              type="tel"
               value={phone}
             />
           </StyledInputWrapper>
