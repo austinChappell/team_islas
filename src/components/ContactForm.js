@@ -104,7 +104,17 @@ class ContactForm extends Component {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="bot-field" value="contact" />
+          <input type="hidden" name="form-name" value="contact" />
+
+          <p hidden>
+            <label>
+              Don’t fill this out:{" "}
+              <input
+                name="bot-field"
+                onChange={(e) => this.handleChange(e)}
+                />
+            </label>
+          </p>
 
           <StyledInputWrapper>
             <StyledLabel>
@@ -112,7 +122,6 @@ class ContactForm extends Component {
             </StyledLabel>
             
             <StyledInput
-              id="name"
               name="name"
               onChange={(e) => this.handleChange(e)}
               value={name}
@@ -125,7 +134,6 @@ class ContactForm extends Component {
             </StyledLabel>
             
             <StyledInput
-              id="email"
               name="email"
               onChange={(e) => this.handleChange(e)}
               value={email}
@@ -138,7 +146,6 @@ class ContactForm extends Component {
             </StyledLabel>
             
             <StyledInput
-              id="phone"
               name="phone"
               onChange={(e) => this.handleChange(e)}
               value={phone}
@@ -151,7 +158,6 @@ class ContactForm extends Component {
             </StyledLabel>
             
             <StyledTextArea
-              id="message"
               name="message"
               onChange={(e) => this.handleChange(e)}
               rows={1}
