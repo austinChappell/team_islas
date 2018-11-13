@@ -20,6 +20,10 @@ const styles = () => ({
     marginLeft: '10px',
     marginRight: '10px',
     minWidth: 300,
+  },
+  submit: {
+    flexBasis: '20%',
+    margin: '10px 0',
   }
 })
 
@@ -117,12 +121,15 @@ class ContactForm extends Component {
             variant="outlined"
           />
 
-          <div style={{ flexBasis: '100%', textAlign: 'center', margin: '10px' }}>
-            <Button
-              disabled={!formValid}
-              type="submit"
-            />
-          </div>
+          <button
+            className={classes.submit}
+            disabled={!formValid}
+            fullWidth
+            // style={{ flexBasis: '100%', textAlign: 'center', margin: '10px', width: '100%' }}
+            type="submit"
+          >
+            Send
+          </button>
         </form>
       </div>
     )
