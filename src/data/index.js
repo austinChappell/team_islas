@@ -1,13 +1,6 @@
-export { BIOS } from './bios';
-export {
-  SUPER_HANDS_INTRO,
-  SUPER_HANDS_QUOTES,
-  SUPER_HANDS_VIDS,
-} from './super_hands';
-export {
-  MASTER_HANDS_INTRO,
-  MASTER_HANDS_QUOTES,
-  MASTER_HANDS_VIDS,
-} from './master_hands';
-export { SPONSORS } from './sponsors';
-export { SOCIAL_MEDIA_LINKS } from './social_media_links';
+export * from './bios';
+export * from './master_hands';
+export * from './opening_statement';
+export * from './social_media_links';
+export * from './sponsors';
+export * from './super_hands';

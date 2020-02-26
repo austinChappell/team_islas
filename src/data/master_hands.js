@@ -1,9 +1,3 @@
-import AusdemorePhoto from '../images/quotes/jeff-ausdemore.jpg';
-import AvilaPhoto from '../images/quotes/art-avila.jpg';
-import ProsperiePhoto from '../images/quotes/jeff-prosperie.jpg';
-import ScheerPhoto from '../images/quotes/zach-scheer.jpg';
-import WeberPhoto from '../images/quotes/paul-weber.jpg';
-
 import CavazosPhoto from '../images/quotes/david-cavazos.jpg';
 import WestPhoto from '../images/quotes/matthew-west.jpg';
 import YamouniPhoto from '../images/quotes/eliana-yamouni.jpg';

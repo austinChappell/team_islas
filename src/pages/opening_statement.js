@@ -13,29 +13,29 @@ import {
 } from '../components/shared';
 
 import {
-  MASTER_HANDS_INTRO,
-  MASTER_HANDS_QUOTES,
-  MASTER_HANDS_VIDS,
+  OPENING_STATEMENT_INTRO,
+  OPENING_STATEMENT_QUOTES,
+  OPENING_STATEMENT_VIDS,
 } from '../data';
 
-import MasterHandsBanner from '../images/master-hands-banner.jpg';
+import OpeningStatementBanner from '../images/opening-statement-banner.jpg';
 
 const ButtonWrapper = styled('div')`
   margin: 50px;
   text-align: center;
 `;
 
-const BUY_NOW_LINK = 'http://www.lulu.com/shop/doug-bush/master-hands/paperback/product-23773948.html#pageProduct';
+const BUY_NOW_LINK = 'https://www.lulu.com/shop/doug-bush/opening-statement/paperback/product-24440334.html#pageProduct';
 
-const MasterHandsPage = () => (
+const OpeningStatementPage = () => (
   <Layout>
     <Banner
-      image={MasterHandsBanner}
+      image={OpeningStatementBanner}
     />
     <Container>
 
       <section style={{ marginTop: 40 }}>
-        {MASTER_HANDS_INTRO.map((para, index) => (
+        {OPENING_STATEMENT_INTRO.map((para, index) => (
           <p
             key={index}
             style={{ margin: '10px' }}
@@ -59,7 +59,7 @@ const MasterHandsPage = () => (
         </Heading3>
       </div>
 
-      <VideoList videos={MASTER_HANDS_VIDS} />
+      <VideoList videos={OPENING_STATEMENT_VIDS} />
 
       <div style={{ margin: '20px', textAlign: 'center' }}>
         <Heading3>
@@ -67,7 +67,7 @@ const MasterHandsPage = () => (
         </Heading3>
       </div>
 
-      <QuoteList quotes={MASTER_HANDS_QUOTES} />
+      <QuoteList quotes={OPENING_STATEMENT_QUOTES} />
 
       <ButtonWrapper>
         <Button
@@ -81,4 +81,4 @@ const MasterHandsPage = () => (
   </Layout>
 );
 
-export default MasterHandsPage;
+export default OpeningStatementPage;
