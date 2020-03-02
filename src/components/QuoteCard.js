@@ -51,7 +51,8 @@ const QuoteCard = ({ quote }) => (
           </FinePrint>
         ))}
       </div>
-      <Avatar src={quote.avatar} />
+
+      {quote.avatar && <Avatar src={quote.avatar} />}
     </div>
     <div
       style={{

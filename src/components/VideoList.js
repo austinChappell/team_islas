@@ -38,6 +38,7 @@ const detailsWrapper = css({
 })
 
 const videoWrapper = css({
+  cursor: 'pointer',
   flexBasis: '150px',
   flexGrow: 1,
   maxWidth: '250px',

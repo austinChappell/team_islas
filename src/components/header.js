@@ -30,6 +30,10 @@ const SUB_MENU_ITEMS = [
     label: 'Master Hands',
     path: '/master_hands',
   },
+  {
+    label: 'Opening Statement',
+    path: '/opening_statement',
+  },
 ];
 
 class Header extends Component {
