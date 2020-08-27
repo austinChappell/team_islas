@@ -34,6 +34,10 @@ const SUB_MENU_ITEMS = [
     label: 'Opening Statement',
     path: '/opening_statement',
   },
+  {
+    label: 'Momentum',
+    path: '/momentum',
+  },
 ];
 
 class Header extends Component {
