@@ -23,7 +23,8 @@ const QuoteCard = ({ quote }) => (
     justifyContent="center"
     style={{
       borderBottom: `1px solid ${COLORS.DISABLED}`,
-      margin: '20px auto',
+      margin: '20px auto 0',
+      padding: '20px 0',
     }}
   >
     <div

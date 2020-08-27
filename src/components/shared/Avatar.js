@@ -12,6 +12,8 @@ const Avatar = ({
       borderRadius: '50%',
       boxShadow: '2px 2px 8px #999999',
       height: size,
+      objectFit: 'cover',
+      objectPosition: 'top',
       width: size,
     }}
   />
