@@ -3,7 +3,6 @@ import { Link, navigate } from 'gatsby'
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import TeamIslasLogo from '../images/team-islas-logo-white.png';
 
 import {
   Container,
@@ -12,6 +11,7 @@ import {
 } from './shared';
 import { FaBars } from 'react-icons/fa';
 import { COLORS } from '../constants';
+import Logo from './shared/Logo';
 
 const SUB_MENU_ITEMS = [
   {
@@ -33,6 +33,10 @@ const SUB_MENU_ITEMS = [
   {
     label: 'Opening Statement',
     path: '/opening_statement',
+  },
+  {
+    label: 'Momentum',
+    path: '/momentum',
   },
 ];
 
@@ -109,11 +113,7 @@ class Header extends Component {
                   textDecoration: 'none',
                 }}
               >
-                <img
-                  alt={siteTitle}
-                  height="40px"
-                  src={TeamIslasLogo}
-                />
+                <Logo color="#ffffff" />
               </Link>
             </Heading2>
             {this.renderSub()}

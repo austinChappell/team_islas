@@ -1,92 +1,79 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { css } from 'react-emotion';
-import YouTube from 'react-youtube';
+import { Button } from '@material-ui/core';
+import { navigate } from 'gatsby';
 
 import Layout from '../components/layout';
 
 import {
+  Button as BuyNowButton,
   Container,
   Heading1,
+  LargeBody,
+  Flex,
 } from '../components/shared';
 
-const MODAL_PADDING = 10;
 
 import HomeBg from '../images/home-bg.jpg';
-import { COLORS } from '../constants';
+import Logo from '../components/shared/Logo';
+import { storeLinks } from '../data';
 
 const homeLayout = css({
   backgroundImage: `url(${HomeBg})`,
   backgroundSize: 'cover',
+  backgroundPosition: 'center',
   textAlign: 'center',
 });
 
-class IndexPage extends Component {
-  modalWrapper = React.createRef();
+const IndexPage = () => {
+  const handleNavigateToMomentum = () => {
+    navigate('/momentum');
+  };
 
-  state = {
-    videoOptions: {
-      height: null,
-      playerVars: {}, // https://developers.google.com/youtube/player_parameters
-      width: null,
-      marginBottom: 0,
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.setVideoDimensions);
-    this.setVideoDimensions();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.setVideoDimensions);
-  }
-
-
-  setVideoDimensions = () => {
-    const videoContainerWidth = this.modalWrapper.clientWidth;
-    const { videoOptions } = this.state;
-    const aspectRatio = 9 / 16;
-    videoOptions.height = `${(videoContainerWidth * aspectRatio) - MODAL_PADDING * 2}px`;
-    videoOptions.width = `${videoContainerWidth - MODAL_PADDING * 2}px`;
-    this.setState({ videoOptions });
-  }
-
-  render() {
-    const { videoOptions } = this.state;
-    const videoStyle = css`
-      margin-bottom: 0;
-      height: ${videoOptions.height};
-      width: ${videoOptions.width};
-    `;
-
-    return (
-      <Layout
-        className={homeLayout}
-        overlayColor="rgba(0, 0, 0, 0.5)"
-      >
+  return (
+    <Layout
+      className={homeLayout}
+      overlayColor="rgba(0, 0, 0, 0.8)"
+    >
       <Container>
-        <div style={{ margin: 15 }}>
+        <div style={{ margin: 50 }}>
+          <div style={{ marginBottom: 40 }}>
+            <Logo
+              color="#ffffff"
+              size={120}
+            />
+          </div>
+
           <Heading1 light>
-            New Album Coming Soon!
+            New Release - Momentum!
           </Heading1>
+
+          <div style={{ margin: '40px 0' }}>
+            <LargeBody light>
+              A collection of exercises, etudes, and solos designed to develop the physical and mental control necessary for self-expression through two-mallet percussion.
+            </LargeBody>
+          </div>
+
+          <Flex justifyContent="center">
+            <div style={{ marginRight: 12 }}>
+              <Button
+                onClick={handleNavigateToMomentum}
+                variant="contained"
+              >
+                Learn More
+              </Button>
+            </div>
+
+            <BuyNowButton
+              buttonText="Buy Now!"
+              href={storeLinks.momentum}
+              variant="contained"
+            />
+          </Flex>
         </div>
-        <div
-          ref={el => this.modalWrapper = el}
-          style={{
-            backgroundColor: 'white',
-            padding: '10px',
-            margin: '0 auto',
-          }}
-        >
-          <YouTube
-            className={videoStyle}
-            videoId="Lnul3DwS_bc"
-          />
-        </div>  
       </Container>
     </Layout>
-      )
-  }
-}
+  );
+};
 
 export default IndexPage;

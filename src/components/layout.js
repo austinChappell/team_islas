@@ -46,6 +46,8 @@ const Layout = ({
           <div
             className={className}
             style={{
+              display: 'flex',
+              flexDirection: 'column',
               flexGrow: 1,
               position: 'relative',
             }}
@@ -53,7 +55,8 @@ const Layout = ({
             <div
               style={{
                 backgroundColor: overlayColor,
-                paddingTop: '50px',
+                flexGrow: 1,
+                paddingTop: NAVBAR_HEIGHT,
               }}
             >
               {children}

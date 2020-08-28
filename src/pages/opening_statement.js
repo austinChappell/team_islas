@@ -16,6 +16,7 @@ import {
   OPENING_STATEMENT_INTRO,
   OPENING_STATEMENT_QUOTES,
   OPENING_STATEMENT_VIDS,
+  storeLinks,
 } from '../data';
 
 import OpeningStatementBanner from '../images/opening-statement-banner.jpg';
@@ -24,8 +25,6 @@ const ButtonWrapper = styled('div')`
   margin: 50px;
   text-align: center;
 `;
-
-const BUY_NOW_LINK = 'https://www.lulu.com/shop/doug-bush/opening-statement/paperback/product-24440334.html#pageProduct';
 
 const OpeningStatementPage = () => (
   <Layout>
@@ -48,7 +47,7 @@ const OpeningStatementPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={BUY_NOW_LINK}
+          href={storeLinks.openingStatement}
           variant="contained"
         />
       </ButtonWrapper>
@@ -72,7 +71,7 @@ const OpeningStatementPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={BUY_NOW_LINK}
+          href={storeLinks.openingStatement}
           variant="contained"
         />
       </ButtonWrapper>
