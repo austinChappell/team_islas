@@ -16,6 +16,7 @@ import {
   SUPER_HANDS_INTRO,
   SUPER_HANDS_QUOTES,
   SUPER_HANDS_VIDS,
+  storeLinks,
 } from '../data';
 
 import SuperHandsBanner from '../images/super-hands-banner.jpg';
@@ -46,7 +47,7 @@ const SuperHandsPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href="http://www.lulu.com/shop/doug-bush/super-hands/paperback/product-23195361.html#pageProduct"
+          href={storeLinks.superHands}
           variant="contained"
         />
       </ButtonWrapper>
@@ -70,7 +71,7 @@ const SuperHandsPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href="http://www.lulu.com/shop/doug-bush/super-hands/paperback/product-23195361.html#pageProduct"
+          href={storeLinks.superHands}
           variant="contained"
         />
       </ButtonWrapper>

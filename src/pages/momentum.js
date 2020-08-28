@@ -10,7 +10,7 @@ import {
   Heading3,
 } from '../components/shared';
 
-import { MOMENTUM_INTRO, MOMENTUM_QUOTES } from '../data';
+import { MOMENTUM_INTRO, MOMENTUM_QUOTES, storeLinks } from '../data';
 
 import MomentumBanner from '../images/momentum-banner.jpg';
 import QuoteList from '../components/QuoteList';
@@ -19,8 +19,6 @@ const ButtonWrapper = styled('div')`
   margin: 50px;
   text-align: center;
 `;
-
-const BUY_NOW_LINK = 'https://www.lulu.com/en/us/shop/patricia-islas/momentum/paperback/product-6jvjzm.html';
 
 const MomentumPage = () => (
   <Layout>
@@ -43,7 +41,7 @@ const MomentumPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={BUY_NOW_LINK}
+          href={storeLinks.momentum}
           variant="contained"
         />
       </ButtonWrapper>
@@ -59,7 +57,7 @@ const MomentumPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={BUY_NOW_LINK}
+          href={storeLinks.momentum}
           variant="contained"
         />
       </ButtonWrapper>

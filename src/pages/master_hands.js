@@ -16,6 +16,7 @@ import {
   MASTER_HANDS_INTRO,
   MASTER_HANDS_QUOTES,
   MASTER_HANDS_VIDS,
+  storeLinks,
 } from '../data';
 
 import MasterHandsBanner from '../images/master-hands-banner.jpg';
@@ -24,8 +25,6 @@ const ButtonWrapper = styled('div')`
   margin: 50px;
   text-align: center;
 `;
-
-const BUY_NOW_LINK = 'http://www.lulu.com/shop/doug-bush/master-hands/paperback/product-23773948.html#pageProduct';
 
 const MasterHandsPage = () => (
   <Layout>
@@ -48,7 +47,7 @@ const MasterHandsPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={BUY_NOW_LINK}
+          href={storeLinks.masterHands}
           variant="contained"
         />
       </ButtonWrapper>
@@ -72,7 +71,7 @@ const MasterHandsPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={BUY_NOW_LINK}
+          href={storeLinks.masterHands}
           variant="contained"
         />
       </ButtonWrapper>
