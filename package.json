@@ -20,7 +20,7 @@
     "react-player": "^1.6.6",
     "react-pose": "^3.3.6",
     "react-youtube": "^7.8.0",
-    "validator": "^10.8.0"
+    "validator": "^13.7.0"
   },
   "keywords": [
     "gatsby"
