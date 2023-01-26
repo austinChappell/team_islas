@@ -70,7 +70,6 @@ class RecipeReviewCard extends React.Component {
           height={180}
           className={classes.media}
           image={user.image}
-          title="Contemplative Reptile"
         />
         <CardActions className={classes.actions} disableActionSpacing>
           <IconButton
