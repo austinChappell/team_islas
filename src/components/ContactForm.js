@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import validator from 'validator';
 import { withStyles } from '@material-ui/core/styles';
-import styled from 'react-emotion';
-
-import { COLORS } from '../constants/colors';
 
 import {
   Button,
@@ -27,41 +24,6 @@ const styles = () => ({
     minWidth: 300,
   }
 });
-
-const StyledInputWrapper = styled('p')`
-  flex-basis: 40%;
-  margin: 10px;
-  min-width: 300px;
-`;
-
-const StyledLabel = styled('label')`
-  display: block;
-`;
-
-const StyledInput = styled('input')`
-  border: 1px solid ${COLORS.DISABLED};
-  border-radius: 5px;
-  box-sizing: border-box;
-  outline: none;
-  padding: 10px;
-  width: 100%;
-  &:focus {
-    border: 1px solid ${COLORS.PRIMARY_1};
-  }
-`;
-
-const StyledTextArea = styled('textarea')`
-  border: 1px solid ${COLORS.DISABLED};
-  border-radius: 5px;
-  box-sizing: border-box;
-  outline: none;
-  padding: 10px;
-  resize: none;
-  width: 100%;
-  &:focus {
-    border: 1px solid ${COLORS.PRIMARY_1};
-  }
-`;
 
 class ContactForm extends Component {
   state = {
