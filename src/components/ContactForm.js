@@ -16,9 +16,11 @@ const styles = () => ({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    margin: '0 auto',
+    maxWidth: 600,
   },
   input: {
-    flexBasis: '40%',
+    flexBasis: '100%',
     margin: '10px',
     marginLeft: '10px',
     marginRight: '10px',
@@ -154,7 +156,7 @@ class ContactForm extends Component {
             multiline
             name="message"
             onChange={this.handleChange}
-            rowsMax="4"
+            rows={4}
             value={message}
             variant="outlined"
           />
