@@ -16,61 +16,56 @@ import {
 
 import HomeBg from '../images/home-bg.jpg';
 import Logo from '../components/shared/Logo';
-import { storeLinks } from '../data';
+import { BIOS, storeLinks } from '../data';
+import BioSection from '../components/BioSection';
 
 const homeLayout = css({
   backgroundImage: `url(${HomeBg})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
+  height: '100vh',
   textAlign: 'center',
 });
 
 const IndexPage = () => {
-  const handleNavigateToMomentum = () => {
-    navigate('/momentum');
-  };
-
   return (
-    <Layout
-      className={homeLayout}
-      overlayColor="rgba(0, 0, 0, 0.8)"
-    >
-      <Container>
-        <div style={{ margin: 50 }}>
-          <div style={{ marginBottom: 40 }}>
+    <Layout>
+      <div
+        className={homeLayout}
+      >
+        <div
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            height: '100%',
+          }}
+        >
+          <Container
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              height: '100%',
+            }}
+          >
             <Logo
               color="#ffffff"
-              size={120}
+              size={240}
             />
-          </div>
-
-          <Heading1 light>
-            New Release - Momentum!
-          </Heading1>
-
-          <div style={{ margin: '40px 0' }}>
-            <LargeBody light>
-              A collection of exercises, etudes, and solos designed to develop the physical and mental control necessary for self-expression through two-mallet percussion.
-            </LargeBody>
-          </div>
-
-          <Flex justifyContent="center">
-            <div style={{ marginRight: 12 }}>
-              <Button
-                onClick={handleNavigateToMomentum}
-                variant="contained"
-              >
-                Learn More
-              </Button>
-            </div>
-
-            <BuyNowButton
-              buttonText="Buy Now!"
-              href={storeLinks.momentum}
-              variant="contained"
-            />
-          </Flex>
+          </Container>
         </div>
+      </div>
+
+      <Container
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 40,
+          padding: 40,
+        }}
+      >
+        {BIOS.map(bio => (
+          <BioSection key={bio.title} {...bio} />
+        ))}
       </Container>
     </Layout>
   );
