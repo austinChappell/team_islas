@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 
 import { COLORS } from '../../constants';
@@ -22,11 +22,18 @@ const CustomButton = ({
   if (unstyled && disabled) {
     textColor = COLORS.DISABLED;
   }
+
+  const handleClick = useCallback((e) => {
+    if (onClick) {
+      onClick(e);
+    }
+  }, [onClick]);
+
   return (
     <Button
       disabled={disabled}
       href={href}
-      onClick={e => onClick(e)}
+      onClick={handleClick}
       style={{
         alignItems: 'center',
         backgroundColor: bgColor,

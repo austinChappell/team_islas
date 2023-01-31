@@ -1,40 +1,40 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import Layout from '../components/layout';
-import QuoteList from '../components/QuoteList';
-import VideoList from '../components/VideoList';
+import Layout from '../../components/layout';
+import QuoteList from '../../components/QuoteList';
+import VideoList from '../../components/VideoList';
 
 import {
   Banner,
   Button,
   Container,
   Heading3,
-} from '../components/shared';
+} from '../../components/shared';
 
 import {
-  OPENING_STATEMENT_INTRO,
-  OPENING_STATEMENT_QUOTES,
-  OPENING_STATEMENT_VIDS,
+  SUPER_HANDS_INTRO,
+  SUPER_HANDS_QUOTES,
+  SUPER_HANDS_VIDS,
   storeLinks,
-} from '../data';
+} from '../../data';
 
-import OpeningStatementBanner from '../images/opening-statement-banner.jpg';
+import SuperHandsBanner from '../../images/super-hands-banner.jpg';
 
 const ButtonWrapper = styled('div')`
   margin: 50px;
   text-align: center;
 `;
 
-const OpeningStatementPage = () => (
+const SuperHandsPage = () => (
   <Layout>
     <Banner
-      image={OpeningStatementBanner}
+      image={SuperHandsBanner}
     />
     <Container>
 
       <section style={{ marginTop: 40 }}>
-        {OPENING_STATEMENT_INTRO.map((para, index) => (
+        {SUPER_HANDS_INTRO.map((para, index) => (
           <p
             key={index}
             style={{ margin: '10px' }}
@@ -47,7 +47,7 @@ const OpeningStatementPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={storeLinks.openingStatement}
+          href={storeLinks.superHands}
           variant="contained"
         />
       </ButtonWrapper>
@@ -58,7 +58,7 @@ const OpeningStatementPage = () => (
         </Heading3>
       </div>
 
-      <VideoList videos={OPENING_STATEMENT_VIDS} />
+      <VideoList videos={SUPER_HANDS_VIDS} />
 
       <div style={{ margin: '20px', textAlign: 'center' }}>
         <Heading3>
@@ -66,12 +66,12 @@ const OpeningStatementPage = () => (
         </Heading3>
       </div>
 
-      <QuoteList quotes={OPENING_STATEMENT_QUOTES} />
+      <QuoteList quotes={SUPER_HANDS_QUOTES} />
 
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={storeLinks.openingStatement}
+          href={storeLinks.superHands}
           variant="contained"
         />
       </ButtonWrapper>
@@ -80,4 +80,4 @@ const OpeningStatementPage = () => (
   </Layout>
 );
 
-export default OpeningStatementPage;
+export default SuperHandsPage;

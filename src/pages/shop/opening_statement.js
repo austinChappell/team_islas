@@ -1,40 +1,40 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import Layout from '../components/layout';
-import QuoteList from '../components/QuoteList';
-import VideoList from '../components/VideoList';
+import Layout from '../../components/layout';
+import QuoteList from '../../components/QuoteList';
+import VideoList from '../../components/VideoList';
 
 import {
   Banner,
   Button,
   Container,
   Heading3,
-} from '../components/shared';
+} from '../../components/shared';
 
 import {
-  MASTER_HANDS_INTRO,
-  MASTER_HANDS_QUOTES,
-  MASTER_HANDS_VIDS,
+  OPENING_STATEMENT_INTRO,
+  OPENING_STATEMENT_QUOTES,
+  OPENING_STATEMENT_VIDS,
   storeLinks,
-} from '../data';
+} from '../../data';
 
-import MasterHandsBanner from '../images/master-hands-banner.jpg';
+import OpeningStatementBanner from '../../images/opening-statement-banner.jpg';
 
 const ButtonWrapper = styled('div')`
   margin: 50px;
   text-align: center;
 `;
 
-const MasterHandsPage = () => (
+const OpeningStatementPage = () => (
   <Layout>
     <Banner
-      image={MasterHandsBanner}
+      image={OpeningStatementBanner}
     />
     <Container>
 
       <section style={{ marginTop: 40 }}>
-        {MASTER_HANDS_INTRO.map((para, index) => (
+        {OPENING_STATEMENT_INTRO.map((para, index) => (
           <p
             key={index}
             style={{ margin: '10px' }}
@@ -47,7 +47,7 @@ const MasterHandsPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={storeLinks.masterHands}
+          href={storeLinks.openingStatement}
           variant="contained"
         />
       </ButtonWrapper>
@@ -58,7 +58,7 @@ const MasterHandsPage = () => (
         </Heading3>
       </div>
 
-      <VideoList videos={MASTER_HANDS_VIDS} />
+      <VideoList videos={OPENING_STATEMENT_VIDS} />
 
       <div style={{ margin: '20px', textAlign: 'center' }}>
         <Heading3>
@@ -66,12 +66,12 @@ const MasterHandsPage = () => (
         </Heading3>
       </div>
 
-      <QuoteList quotes={MASTER_HANDS_QUOTES} />
+      <QuoteList quotes={OPENING_STATEMENT_QUOTES} />
 
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={storeLinks.masterHands}
+          href={storeLinks.openingStatement}
           variant="contained"
         />
       </ButtonWrapper>
@@ -80,4 +80,4 @@ const MasterHandsPage = () => (
   </Layout>
 );
 
-export default MasterHandsPage;
+export default OpeningStatementPage;

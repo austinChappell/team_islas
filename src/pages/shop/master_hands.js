@@ -1,40 +1,40 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import Layout from '../components/layout';
-import QuoteList from '../components/QuoteList';
-import VideoList from '../components/VideoList';
+import Layout from '../../components/layout';
+import QuoteList from '../../components/QuoteList';
+import VideoList from '../../components/VideoList';
 
 import {
   Banner,
   Button,
   Container,
   Heading3,
-} from '../components/shared';
+} from '../../components/shared';
 
 import {
-  SUPER_HANDS_INTRO,
-  SUPER_HANDS_QUOTES,
-  SUPER_HANDS_VIDS,
+  MASTER_HANDS_INTRO,
+  MASTER_HANDS_QUOTES,
+  MASTER_HANDS_VIDS,
   storeLinks,
-} from '../data';
+} from '../../data';
 
-import SuperHandsBanner from '../images/super-hands-banner.jpg';
+import MasterHandsBanner from '../../images/master-hands-banner.jpg';
 
 const ButtonWrapper = styled('div')`
   margin: 50px;
   text-align: center;
 `;
 
-const SuperHandsPage = () => (
+const MasterHandsPage = () => (
   <Layout>
     <Banner
-      image={SuperHandsBanner}
+      image={MasterHandsBanner}
     />
     <Container>
 
       <section style={{ marginTop: 40 }}>
-        {SUPER_HANDS_INTRO.map((para, index) => (
+        {MASTER_HANDS_INTRO.map((para, index) => (
           <p
             key={index}
             style={{ margin: '10px' }}
@@ -47,7 +47,7 @@ const SuperHandsPage = () => (
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={storeLinks.superHands}
+          href={storeLinks.masterHands}
           variant="contained"
         />
       </ButtonWrapper>
@@ -58,7 +58,7 @@ const SuperHandsPage = () => (
         </Heading3>
       </div>
 
-      <VideoList videos={SUPER_HANDS_VIDS} />
+      <VideoList videos={MASTER_HANDS_VIDS} />
 
       <div style={{ margin: '20px', textAlign: 'center' }}>
         <Heading3>
@@ -66,12 +66,12 @@ const SuperHandsPage = () => (
         </Heading3>
       </div>
 
-      <QuoteList quotes={SUPER_HANDS_QUOTES} />
+      <QuoteList quotes={MASTER_HANDS_QUOTES} />
 
       <ButtonWrapper>
         <Button
           buttonText="Buy Now!"
-          href={storeLinks.superHands}
+          href={storeLinks.masterHands}
           variant="contained"
         />
       </ButtonWrapper>
@@ -80,4 +80,4 @@ const SuperHandsPage = () => (
   </Layout>
 );
 
-export default SuperHandsPage;
+export default MasterHandsPage;

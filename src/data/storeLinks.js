@@ -1,6 +1,6 @@
 export const storeLinks = {
-  masterHands: 'http://www.lulu.com/shop/doug-bush/master-hands/paperback/product-23773948.html#pageProduct',
+  masterHands: 'https://www.lulu.com/shop/doug-bush/master-hands/paperback/product-1g2kpwwg.html',
   momentum: 'https://www.lulu.com/en/us/shop/patricia-islas/momentum/paperback/product-6jvjzm.html',
-  openingStatement: 'https://www.lulu.com/shop/doug-bush/opening-statement/paperback/product-24440334.html#pageProduct',
-  superHands: 'http://www.lulu.com/shop/doug-bush/super-hands/paperback/product-23195361.html#pageProduct',
+  openingStatement: 'https://www.lulu.com/shop/doug-bush/opening-statement/paperback/product-1z7rk2k8.html',
+  superHands: 'https://www.lulu.com/shop/doug-bush/super-hands/paperback/product-1kw8pdr4.html',
 };

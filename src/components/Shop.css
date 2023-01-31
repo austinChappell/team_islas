@@ -1,0 +1,14 @@
+.description-container {
+    flex-wrap: nowrap !important;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .book-title-container {
+        width: 100%;
+    }
+
+    .description-container {
+        flex-wrap: wrap !important;
+    }
+}

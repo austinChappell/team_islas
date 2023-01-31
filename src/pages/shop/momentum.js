@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 
 import {
   Banner,
   Button,
   Container,
   Heading3,
-} from '../components/shared';
+} from '../../components/shared';
 
-import { MOMENTUM_INTRO, MOMENTUM_QUOTES, storeLinks } from '../data';
+import { MOMENTUM_INTRO, MOMENTUM_QUOTES, storeLinks } from '../../data';
 
-import MomentumBanner from '../images/momentum-banner.jpg';
-import QuoteList from '../components/QuoteList';
+import MomentumBanner from '../../images/momentum-banner.jpg';
+import QuoteList from '../../components/QuoteList';
 
 const ButtonWrapper = styled('div')`
   margin: 50px;
