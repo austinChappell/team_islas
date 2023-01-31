@@ -6,7 +6,6 @@ import VideoList from '../../components/VideoList';
 
 import {
   Banner,
-  Button,
   Container,
   Heading3,
 } from '../../components/shared';
@@ -20,6 +19,7 @@ import {
 
 import OpeningStatementBanner from '../../images/opening-statement-banner.jpg';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
+import BuyNowButton from '../../components/ButNowButton';
 
 const OpeningStatementPage = () => (
   <Layout>
@@ -40,11 +40,7 @@ const OpeningStatementPage = () => (
       </section>
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.openingStatement}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.openingStatement} />
       </BuyNowButtonWrapper>
 
       <div style={{ marginTop: 20, textAlign: 'center' }}>
@@ -64,11 +60,7 @@ const OpeningStatementPage = () => (
       <QuoteList quotes={OPENING_STATEMENT_QUOTES} />
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.openingStatement}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.openingStatement} />
       </BuyNowButtonWrapper>
 
     </Container>

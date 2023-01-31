@@ -6,7 +6,6 @@ import VideoList from '../../components/VideoList';
 
 import {
   Banner,
-  Button,
   Container,
   Heading3,
 } from '../../components/shared';
@@ -20,6 +19,7 @@ import {
 
 import MasterHandsBanner from '../../images/master-hands-banner.jpg';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
+import BuyNowButton from '../../components/ButNowButton';
 
 const MasterHandsPage = () => (
   <Layout>
@@ -40,11 +40,7 @@ const MasterHandsPage = () => (
       </section>
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.masterHands}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.masterHands} />
       </BuyNowButtonWrapper>
 
       <div style={{ marginTop: 20, textAlign: 'center' }}>
@@ -64,11 +60,7 @@ const MasterHandsPage = () => (
       <QuoteList quotes={MASTER_HANDS_QUOTES} />
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.masterHands}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.masterHands} />
       </BuyNowButtonWrapper>
 
     </Container>

@@ -6,7 +6,6 @@ import VideoList from '../../components/VideoList';
 
 import {
   Banner,
-  Button,
   Container,
   Heading3,
 } from '../../components/shared';
@@ -20,6 +19,7 @@ import {
 
 import SuperHandsBanner from '../../images/super-hands-banner.jpg';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
+import BuyNowButton from '../../components/ButNowButton';
 
 const SuperHandsPage = () => (
   <Layout>
@@ -40,11 +40,7 @@ const SuperHandsPage = () => (
       </section>
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.superHands}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.superHands} />
       </BuyNowButtonWrapper>
 
       <div style={{ marginTop: 20, textAlign: 'center' }}>
@@ -64,11 +60,7 @@ const SuperHandsPage = () => (
       <QuoteList quotes={SUPER_HANDS_QUOTES} />
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.superHands}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.superHands} />
       </BuyNowButtonWrapper>
 
     </Container>

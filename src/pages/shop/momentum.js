@@ -4,7 +4,6 @@ import Layout from '../../components/layout';
 
 import {
   Banner,
-  Button,
   Container,
   Heading3,
 } from '../../components/shared';
@@ -14,6 +13,7 @@ import { MOMENTUM_INTRO, MOMENTUM_QUOTES, storeLinks } from '../../data';
 import MomentumBanner from '../../images/momentum-banner.jpg';
 import QuoteList from '../../components/QuoteList';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
+import BuyNowButton from '../../components/ButNowButton';
 
 const MomentumPage = () => (
   <Layout>
@@ -34,11 +34,7 @@ const MomentumPage = () => (
       </section>
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.momentum}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.momentum} />
       </BuyNowButtonWrapper>
 
       <div style={{ margin: '20px', textAlign: 'center' }}>
@@ -50,11 +46,7 @@ const MomentumPage = () => (
       <QuoteList quotes={MOMENTUM_QUOTES} />
 
       <BuyNowButtonWrapper>
-        <Button
-          buttonText="Buy Now!"
-          href={storeLinks.momentum}
-          variant="contained"
-        />
+        <BuyNowButton href={storeLinks.momentum} />
       </BuyNowButtonWrapper>
     </Container>
   </Layout>

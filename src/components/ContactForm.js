@@ -1,29 +1,13 @@
 import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
 import validator from 'validator';
-import { withStyles } from '@material-ui/core/styles';
+import { TextField } from '@mui/material';
+
+import './ContactForm.css';
 
 import {
   Button,
   Heading3,
 } from './shared';
-
-const styles = () => ({
-  form: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    margin: '0 auto',
-    maxWidth: 600,
-  },
-  input: {
-    flexBasis: '100%',
-    margin: '10px',
-    marginLeft: '10px',
-    marginRight: '10px',
-    minWidth: 300,
-  }
-});
 
 class ContactForm extends Component {
   state = {
@@ -44,7 +28,6 @@ class ContactForm extends Component {
       name,
       phone,
     } = this.state;
-    const { classes } = this.props;
 
     const emailValid = validator.isEmail(email);
     const messageValid = validator.isLength(message.trim(), { min: 5 });
@@ -62,7 +45,7 @@ class ContactForm extends Component {
         </div>
 
         <form
-          className={classes.form}
+          className="contact-form"
           name="contact"
           method="post"
           data-netlify="true"
@@ -81,7 +64,7 @@ class ContactForm extends Component {
           </p>
 
           <TextField
-            className={classes.input}
+            className="contact-form-input"
             fullWidth
             label="Name"
             margin="normal"
@@ -91,7 +74,7 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={classes.input}
+            className="contact-form-input"
             fullWidth
             label="Email"
             margin="normal"
@@ -101,7 +84,7 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={classes.input}
+            className="contact-form-input"
             fullWidth
             label="Phone"
             margin="normal"
@@ -111,7 +94,7 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={classes.input}
+            className="contact-form-input"
             fullWidth
             label="Message"
             margin="normal"
@@ -135,4 +118,4 @@ class ContactForm extends Component {
   }
 }
 
-export default withStyles(styles)(ContactForm);
+export default ContactForm;

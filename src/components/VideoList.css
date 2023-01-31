@@ -1,0 +1,11 @@
+.video-list-wrapper {
+    margin-bottom: 60px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.video-list-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

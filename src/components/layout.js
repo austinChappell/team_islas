@@ -2,12 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 import Footer from './Footer';
 import Header from './header';
 import './layout.css';
+import { COLORS } from '../constants';
 
 const NAVBAR_HEIGHT = 60;
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: COLORS.PRIMARY_1,
+    },
+  },
+});
 
 const Layout = ({
   children,
@@ -26,7 +36,7 @@ const Layout = ({
       }
     `}
     render={data => (
-      <>
+      <ThemeProvider theme={theme}>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -65,7 +75,7 @@ const Layout = ({
           </div>
           <Footer />
         </div>
-      </>
+      </ThemeProvider>
     )}
   />
 );

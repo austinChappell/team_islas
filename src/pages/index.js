@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 import Layout from '../components/layout';
 import { Container } from '../components/shared';

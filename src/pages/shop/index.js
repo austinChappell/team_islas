@@ -6,11 +6,11 @@ import {
   CardContent,
   List,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import { Link } from 'gatsby';
 
 import Layout from '../../components/layout';
-import { Button as CustomButton, Container, Flex } from '../../components/shared';
+import { Container, Flex } from '../../components/shared';
 import MasterHandsImage from '../../images/book_covers/master_hands.jpg';
 import OpeningStatementImage from '../../images/book_covers/opening_statement.jpg';
 import MomentumImage from '../../images/book_covers/momentum.jpg';
@@ -25,6 +25,7 @@ import {
 } from '../../data';
 
 import '../../components/Shop.css';
+import BuyNowButton from '../../components/ButNowButton';
 
 const authors = {
   doug: 'Doug Bush',
@@ -118,11 +119,7 @@ const Shop = () => {
                     </Button>
                   </Link>
 
-                  <CustomButton
-                    buttonText="Buy Now!"
-                    href={book.storeLink}
-                    variant="contained"
-                  />
+                  <BuyNowButton href={book.storeLink} />
                 </Flex>
               </CardActions>
             </Card>

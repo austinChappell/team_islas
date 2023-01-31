@@ -90,10 +90,10 @@ class BioCard extends Component {
           textAlign: 'center',
         }}>
           <Button
-            buttonText={isExpanded ? 'Show less' : 'Show more'}
             onClick={this.toggleExpand}
-            unstyled
-          />
+          >
+            {isExpanded ? 'Show less' : 'Show more'}
+          </Button>
         </div>}
       </Card>
     )

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import { Box } from '@mui/material';
 
 const BuyNowButtonWrapper = ({ children }) => (
   <Box margin={8} textAlign="center">
