@@ -2,7 +2,6 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardMedia,
   Typography,
 } from '@mui/material';
 import React from 'react';
@@ -11,15 +10,12 @@ import PropTypes from 'prop-types';
 import './BioSection.css';
 
 const BioSection = ({
-  image,
   paragraphs,
+  renderImage,
   title,
 }) => (
   <Card>
-    <CardMedia
-      component="img"
-      image={image}
-    />
+    {renderImage()}
 
     <CardHeader title={title} />
 
@@ -38,9 +34,9 @@ const BioSection = ({
 );
 
 const propTypes = {
-  image: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   paragraphs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  renderImage: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
 };
 

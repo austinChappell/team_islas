@@ -1,32 +1,45 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 import { Container } from '../components/shared';
-import HomeBg from '../images/home-bg.jpg';
 import Logo from '../components/shared/Logo';
 import { BIOS } from '../data';
 import BioSection from '../components/BioSection';
 
-const homeLayout = css({
-  backgroundImage: `url(${HomeBg})`,
-  backgroundSize: 'cover',
-  backgroundPosition: '45%',
-  height: '100vh',
-  textAlign: 'center',
-});
+import '../components/Home.css';
 
 const IndexPage = () => (
   <Layout excludePaddingTop>
-    <div
-      className={homeLayout}
+    <Box
+      height="100vh"
+      position="relative"
     >
-      <div
-        style={{
+      <Box
+        height="100%"
+        left={0}
+        position="absolute"
+        top={0}
+        width="100%"
+      >
+        <StaticImage
+          alt="Home background"
+          className="home-bg"
+          src="../images/home-bg.jpg"
+        />
+      </Box>
+
+      <Box
+        height="100%"
+        left={0}
+        position="absolute"
+        sx={{
           backgroundColor: 'rgba(0, 0, 0, 0.8)',
-          height: '100%',
         }}
+        top={0}
+        width="100%"
       >
         <Container
           style={{
@@ -51,8 +64,8 @@ const IndexPage = () => (
             The combined musical power of husband-wife duo Doug Bush and Patricia Islas
           </Typography>
         </Container>
-      </div>
-    </div>
+      </Box>
+    </Box>
 
     <Container
       style={{
