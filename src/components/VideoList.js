@@ -2,14 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import YouTube from 'react-youtube';
 import { css } from '@emotion/css';
-import { Accordion, AccordionDetails, AccordionSummary, Container, Modal } from '@mui/material';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Container,
+  Modal,
+  Typography
+} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import './VideoList.css';
 
 import {
   Heading5,
-  LargeBody,
 } from '../components/shared';
 
 const styles = () => ({
@@ -165,9 +171,9 @@ class VideoList extends Component {
                   </div>
 
                   <div className={videoDescriptionWrapper}>
-                    <LargeBody>
+                    <Typography>
                       {vid.description}
-                    </LargeBody>
+                    </Typography>
                   </div>
                 </div>
               </AccordionDetails>

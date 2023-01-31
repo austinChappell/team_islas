@@ -2,13 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-import {
-  LargeBody,
-} from '../components/shared';
 import {
   Card,
-  CardActions, CardContent,
+  CardActions,
+  CardContent,
   CardHeader,
   CardMedia,
   Collapse,
@@ -89,11 +86,12 @@ class RecipeReviewCard extends React.Component {
           <CardContent>
             {user.paragraphs.map((para, index) => {
               return (
-                <LargeBody
+                <Typography
                   key={index}
+                  gutterBottom
                 >
                   {para}
-                </LargeBody>
+                </Typography>
               )
             })}
           </CardContent>

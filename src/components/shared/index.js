@@ -9,8 +9,5 @@ export {
   Heading4,
   Heading5,
   Heading6,
-  LargeBody,
-  SmallBody,
-  FinePrint,
 } from './texts';
 export { default as ResponsiveVideoPlayer } from './ResponsiveVideoPlayer';

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Button,
   Card,
   Heading3,
-  LargeBody,
 } from '../components/shared';
+import { Typography } from '@mui/material';
 
 const MAX_HEIGHT = 200;
 
@@ -67,9 +66,9 @@ class BioCard extends Component {
             </div>
             {user.paragraphs.map((para, index) => {
               return (
-                <LargeBody key={index}>
+                <Typography key={index} gutterBottom>
                   {para}
-                </LargeBody>
+                </Typography>
               )
             })}
             {!isExpanded && exceedsContainer && <div
