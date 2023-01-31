@@ -12,6 +12,7 @@ const NAVBAR_HEIGHT = 60;
 const Layout = ({
   children,
   className = '',
+  excludePaddingTop = false,
   overlayColor = '#00000000',
 }) => (
   <StaticQuery
@@ -56,7 +57,7 @@ const Layout = ({
               style={{
                 backgroundColor: overlayColor,
                 flexGrow: 1,
-                paddingTop: NAVBAR_HEIGHT,
+                paddingTop: excludePaddingTop ? 0 : NAVBAR_HEIGHT,
               }}
             >
               {children}
