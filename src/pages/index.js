@@ -56,6 +56,7 @@ const IndexPage = () => (
           />
 
           <Typography
+            align="center"
             color="inherit"
             variant="h4"
           >
