@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import validator from 'validator';
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 
 import './ContactForm.css';
 
 import {
-  Button,
   Heading3,
 } from './shared';
 
@@ -110,7 +109,10 @@ class ContactForm extends Component {
             <Button
               disabled={!formValid}
               type="submit"
-            />
+              variant="contained"
+            >
+              Submit
+            </Button>
           </div>
         </form>
       </div>
