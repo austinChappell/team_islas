@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
+import { Container } from '@mui/material';
 
 import {
-  Container,
   Flex,
   Heading2,
 } from './shared';
 import { COLORS } from '../constants';
 import Logo from './shared/Logo';
+
+export const NAVBAR_HEIGHT = 60;
 
 const SUB_MENU_ITEMS = [
   {
@@ -45,6 +47,7 @@ class Header extends Component {
       <Flex
         style={{
           background: COLORS.PRIMARY_1,
+          height: NAVBAR_HEIGHT,
           position: 'fixed',
           top: 0,
           left: 0,

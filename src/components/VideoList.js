@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import YouTube from 'react-youtube';
 import { css } from '@emotion/css';
-import { Accordion, AccordionDetails, AccordionSummary, Modal } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Container, Modal } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-import {
-  Container,
-} from '../components/shared';
 
 import './VideoList.css';
 

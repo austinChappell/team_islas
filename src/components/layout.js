@@ -5,11 +5,10 @@ import { StaticQuery, graphql } from 'gatsby';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 import Footer from './Footer';
-import Header from './header';
+import Header, { NAVBAR_HEIGHT } from './header';
 import './layout.css';
 import { COLORS } from '../constants';
 
-const NAVBAR_HEIGHT = 60;
 
 const theme = createTheme({
   palette: {

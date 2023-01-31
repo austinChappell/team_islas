@@ -1,22 +1,19 @@
 import React from 'react';
+import { Container } from '@mui/material';
 
 import Layout from '../../components/layout';
 import QuoteList from '../../components/QuoteList';
 import VideoList from '../../components/VideoList';
-
 import {
   Banner,
-  Container,
   Heading3,
 } from '../../components/shared';
-
 import {
   SUPER_HANDS_INTRO,
   SUPER_HANDS_QUOTES,
   SUPER_HANDS_VIDS,
   storeLinks,
 } from '../../data';
-
 import SuperHandsBanner from '../../images/super-hands-banner.jpg';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
 import BuyNowButton from '../../components/ButNowButton';
@@ -26,8 +23,8 @@ const SuperHandsPage = () => (
     <Banner
       image={SuperHandsBanner}
     />
-    <Container>
 
+    <Container>
       <section style={{ marginTop: 40 }}>
         {SUPER_HANDS_INTRO.map((para, index) => (
           <p

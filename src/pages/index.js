@@ -1,10 +1,8 @@
 import React from 'react';
-import { css } from '@emotion/css';
-import { Box, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
-import { Container } from '../components/shared';
 import Logo from '../components/shared/Logo';
 import { BIOS } from '../data';
 import BioSection from '../components/BioSection';
@@ -68,11 +66,12 @@ const IndexPage = () => (
     </Box>
 
     <Container
-      style={{
+      maxWidth="md"
+      sx={{
         display: 'flex',
         flexDirection: 'column',
-        gap: 40,
-        padding: 40,
+        gap: 4,
+        paddingY: 4,
       }}
     >
       {BIOS.map(bio => (

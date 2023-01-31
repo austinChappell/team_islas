@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from '@mui/material';
 
 import Layout from '../../components/layout';
 import QuoteList from '../../components/QuoteList';
@@ -6,7 +7,6 @@ import VideoList from '../../components/VideoList';
 
 import {
   Banner,
-  Container,
   Heading3,
 } from '../../components/shared';
 
@@ -26,8 +26,8 @@ const MasterHandsPage = () => (
     <Banner
       image={MasterHandsBanner}
     />
-    <Container>
 
+    <Container>
       <section style={{ marginTop: 40 }}>
         {MASTER_HANDS_INTRO.map((para, index) => (
           <p

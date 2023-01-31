@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Container } from '@mui/material';
+
 import {
-  Container,
   FinePrint,
   Flex,
 } from './shared';
@@ -80,7 +81,7 @@ class Footer extends Component {
                 display: 'flex',
                 flexWrap: 'wrap',
                 justifyContent: 'center',
-              }}            
+              }}
             >
               {SOCIAL_MEDIA_LINKS.map((link, index) => {
                 const {

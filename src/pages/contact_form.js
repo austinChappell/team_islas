@@ -1,13 +1,12 @@
 import React from 'react';
+import { Container } from '@mui/material';
 
 import ContactForm from '../components/ContactForm';
 import Layout from '../components/layout';
 
-import { Container } from '../components/shared';
-
 const ContactFormPage = () => (
   <Layout>
-    <Container>
+    <Container maxWidth="md">
       <ContactForm />
     </Container>
   </Layout>

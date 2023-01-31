@@ -1,15 +1,12 @@
 import React from 'react';
+import { Container } from '@mui/material';
 
 import Layout from '../../components/layout';
-
 import {
   Banner,
-  Container,
   Heading3,
 } from '../../components/shared';
-
 import { MOMENTUM_INTRO, MOMENTUM_QUOTES, storeLinks } from '../../data';
-
 import MomentumBanner from '../../images/momentum-banner.jpg';
 import QuoteList from '../../components/QuoteList';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
