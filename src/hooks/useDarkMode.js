@@ -24,6 +24,10 @@ export function useDarkMode() {
   // Fire off effect that add/removes dark mode class
   useEffect(
     () => {
+      if (typeof window === 'undefined') {
+        return;
+      }
+
       const className = 'dark-mode';
       const element = window.document.body;
       if (enabled) {
@@ -31,9 +35,9 @@ export function useDarkMode() {
       } else {
         element.classList.remove(className);
       }
-    },
-    [enabled], // Only re-call effect when value changes
+    }, [enabled], // Only re-call effect when value changes
   );
+
   // Return enabled state and setter
   return [enabled, setEnabledState];
 }
