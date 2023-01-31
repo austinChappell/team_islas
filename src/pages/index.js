@@ -40,13 +40,13 @@ const IndexPage = () => (
         width="100%"
       >
         <Container
-          style={{
+          sx={{
             alignItems: 'center',
             color: '#ffffff',
             display: 'flex',
             flexDirection: 'column',
             height: '100%',
-            gap: 40,
+            gap: { xs: 4, sm: 8 },
             paddingTop: '20vh',
           }}
         >
@@ -55,13 +55,16 @@ const IndexPage = () => (
             size={240}
           />
 
-          <Typography
-            align="center"
-            color="inherit"
-            variant="h4"
-          >
-            The combined musical power of husband-wife duo Doug Bush and Patricia Islas
-          </Typography>
+          <Container maxWidth="sm">
+            <Typography
+              align="center"
+              color="inherit"
+              sx={{ fontSize: { xs: 28, sm: 36 } }}
+              variant="h4"
+            >
+              The combined musical power of husband-wife duo Doug Bush and Patricia Islas
+            </Typography>
+          </Container>
         </Container>
       </Box>
     </Box>
