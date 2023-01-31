@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'react-emotion';
+import { css } from '@emotion/css';
 import { Typography } from '@material-ui/core';
 
 import Layout from '../components/layout';

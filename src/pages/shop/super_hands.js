@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'react-emotion';
 
 import Layout from '../../components/layout';
 import QuoteList from '../../components/QuoteList';
@@ -20,11 +19,7 @@ import {
 } from '../../data';
 
 import SuperHandsBanner from '../../images/super-hands-banner.jpg';
-
-const ButtonWrapper = styled('div')`
-  margin: 50px;
-  text-align: center;
-`;
+import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
 
 const SuperHandsPage = () => (
   <Layout>
@@ -44,13 +39,13 @@ const SuperHandsPage = () => (
         ))}
       </section>
 
-      <ButtonWrapper>
+      <BuyNowButtonWrapper>
         <Button
           buttonText="Buy Now!"
           href={storeLinks.superHands}
           variant="contained"
         />
-      </ButtonWrapper>
+      </BuyNowButtonWrapper>
 
       <div style={{ marginTop: 20, textAlign: 'center' }}>
         <Heading3>
@@ -68,13 +63,13 @@ const SuperHandsPage = () => (
 
       <QuoteList quotes={SUPER_HANDS_QUOTES} />
 
-      <ButtonWrapper>
+      <BuyNowButtonWrapper>
         <Button
           buttonText="Buy Now!"
           href={storeLinks.superHands}
           variant="contained"
         />
-      </ButtonWrapper>
+      </BuyNowButtonWrapper>
 
     </Container>
   </Layout>
