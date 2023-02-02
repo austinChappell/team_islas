@@ -11,6 +11,8 @@ function usePrefersDarkMode() {
   return useMedia(['(prefers-color-scheme: dark)'], [true], false);
 }
 
+export const isUsingDarkMode = false;
+
 export function useDarkMode() {
   // Use our useLocalStorage hook to persist state through a page refresh.
   // Read the recipe for this hook to learn more: usehooks.com/useLocalStorage
@@ -39,5 +41,5 @@ export function useDarkMode() {
   );
 
   // Return enabled state and setter
-  return [enabled, setEnabledState];
+  return [isUsingDarkMode && enabled, setEnabledState];
 }

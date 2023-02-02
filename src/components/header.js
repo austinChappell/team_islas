@@ -11,6 +11,7 @@ import { COLORS } from '../constants';
 import Logo from './shared/Logo';
 
 import '../components/Header.css';
+import { isUsingDarkMode } from '../hooks/useDarkMode';
 
 export const NAVBAR_HEIGHT = 60;
 
@@ -58,12 +59,14 @@ class Header extends Component {
           </Link>
         ))}
 
-        <button
-          className="dark-mode-button"
-          onClick={this.props.onToggleDarkMode}
-        >
-          {this.props.isDarkMode ? <MoonIcon /> : <SunIcon />}
-        </button>
+        {isUsingDarkMode && (
+          <button
+            className="dark-mode-button"
+            onClick={this.props.onToggleDarkMode}
+          >
+            {this.props.isDarkMode ? <MoonIcon /> : <SunIcon />}
+          </button>
+        )}
       </Flex>
     )
   }
