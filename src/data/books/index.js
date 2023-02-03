@@ -13,7 +13,7 @@ import {
 import { hiddenAmongstFallenLeavesDescription } from './hiddenAmongstFallenLeaves';
 import { yoursRudimentallyDescription } from './yours_rudimentally';
 
-import ClapocolypseImage from '../../images/book_covers/clapocolypse.jpg';
+import ClapocalypseImage from '../../images/book_covers/clapocalypse.jpg';
 import ClosingRemarksImage from '../../images/book_covers/closing_remarks.jpg';
 import HiddenAmongstFallenLeavesImage from '../../images/book_covers/hidden_amongst_fallen_leaves.jpg';
 import HymnOfTheShieldMaidenImage from '../../images/book_covers/hymn_of_the_shield_maiden.jpg';
@@ -32,7 +32,7 @@ const authors = {
 export const booksLookup = {
   clapocalypse: {
     authors: [authors.doug, authors.patricia],
-    coverImage: ClapocolypseImage,
+    coverImage: ClapocalypseImage,
     description: [
       'ClapocalypsE is an intermediate percussion ensemble for 5 Clappers, 1 Marimba, and 1 Vibraphone',
       'Written with the modern style of rudimental bass drumming in mind, the performers of the clapping parts, or “Clappers," are required to play both split and unison patterns with great rhythmic clarity. The mallet parts are written for intermediate-level performers, perhaps individuals new to the four-mallet techniques.',
