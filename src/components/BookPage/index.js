@@ -53,7 +53,7 @@ const BookPage = ({
               alt={book.title}
               component="img"
               src={book.coverImage}
-              sx={{ maxHeight: 300 }}
+              sx={{ boxShadow: '0px 0px 2px 2px #eee', maxHeight: 300 }}
             />
 
             <div>

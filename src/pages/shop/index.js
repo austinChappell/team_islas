@@ -46,7 +46,7 @@ const Shop = () => (
                   <img
                     alt={book.title}
                     src={book.coverImage}
-                    style={{ maxHeight: 200 }}
+                    style={{ boxShadow: '0px 0px 2px 2px #eee', maxHeight: 200 }}
                   />
 
                   <div>
