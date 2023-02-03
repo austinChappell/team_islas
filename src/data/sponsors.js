@@ -1,5 +1,5 @@
 import beetleLogo from '../images/sponsors/beetle-percussion-logo-white.png';
-import dreamCymbalLogo from '../images/sponsors/dream-cymbals-white.png';
+import sabianCymbalsLogo from '../images/sponsors/sabian-cymbals-white.svg';
 import lotRiotLogo from '../images/sponsors/logo-lot-riot-white.png';
 import majesticLogo from '../images/sponsors/logo-majestic-white.png';
 import mapexLogo from '../images/sponsors/logo-white-mapex.png';
@@ -8,9 +8,9 @@ import remoLogo from '../images/sponsors/logo-remo-white.png';
 
 export const SPONSORS = [
   {
-    href: 'https://dreamcymbals.com/',
-    imgUrl: dreamCymbalLogo,
-    alt: 'Dream Cymbals',
+    href: 'https://sabian.com/',
+    imgUrl: sabianCymbalsLogo,
+    alt: 'Sabian Cymbals',
   },
   {
     href: 'http://www.mapexdrums.com/',
