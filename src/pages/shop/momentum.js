@@ -6,11 +6,13 @@ import {
   Banner,
   Heading3,
 } from '../../components/shared';
-import { MOMENTUM_INTRO, MOMENTUM_QUOTES, storeLinks } from '../../data';
+import { MOMENTUM_INTRO, MOMENTUM_QUOTES } from '../../data';
 import MomentumBanner from '../../images/momentum-banner.jpg';
 import QuoteList from '../../components/QuoteList';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
 import BuyNowButton from '../../components/ButNowButton';
+
+const storeLinks = {};
 
 const MomentumPage = () => (
   <Layout>

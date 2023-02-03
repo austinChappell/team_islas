@@ -14,12 +14,13 @@ import {
   MASTER_HANDS_INTRO,
   MASTER_HANDS_QUOTES,
   MASTER_HANDS_VIDS,
-  storeLinks,
 } from '../../data';
 
 import MasterHandsBanner from '../../images/master-hands-banner.jpg';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
 import BuyNowButton from '../../components/ButNowButton';
+
+const storeLinks = {};
 
 const MasterHandsPage = () => (
   <Layout>

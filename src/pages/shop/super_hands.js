@@ -12,11 +12,13 @@ import {
   SUPER_HANDS_INTRO,
   SUPER_HANDS_QUOTES,
   SUPER_HANDS_VIDS,
-  storeLinks,
 } from '../../data';
 import SuperHandsBanner from '../../images/super-hands-banner.jpg';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
 import BuyNowButton from '../../components/ButNowButton';
+
+// TODO: remove this
+const storeLinks = {};
 
 const SuperHandsPage = () => (
   <Layout>

@@ -1,11 +1,11 @@
-import HallPhoto from '../images/quotes/dave-hall.jpg';
-import FordPhoto from '../images/quotes/mark-ford.jpg';
-import ZatorPhoto from '../images/quotes/brian-zator.jpg';
-import TuckerPhoto from '../images/quotes/drew-tucker.jpg';
-import WuPhoto from '../images/quotes/she-e-wu.jpg';
+import HallPhoto from '../../images/quotes/dave-hall.jpg';
+import FordPhoto from '../../images/quotes/mark-ford.jpg';
+import ZatorPhoto from '../../images/quotes/brian-zator.jpg';
+import TuckerPhoto from '../../images/quotes/drew-tucker.jpg';
+import WuPhoto from '../../images/quotes/she-e-wu.jpg';
 
 export const MOMENTUM_INTRO = [
-  'Momentum is a collection of exercises, etudes, and solos designed to develop the physical and mental control necessary for self-expression through two-mallet percussion.  The exercises are organized to develop a balanced variety of skills in an achievable progression.  The etudes are short musical examples intended to transfer recently acquired skills to a more musical context.  And finally the solos are physically challenging, musically mature, and composed to sound cool enough to be worth the effort.  To those disciplined enough to complete the exercise, etudes, and solos of Momentum, the two-mallet universe is yours!',
+  'Momentum is a collection of exercises, etudes, and solos designed to develop the physical and mental control necessary for self-expression through two-mallet percussion. The exercises are organized to develop a balanced variety of skills in an achievable progression.  The etudes are short musical examples intended to transfer recently acquired skills to a more musical context.  And finally the solos are physically challenging, musically mature, and composed to sound cool enough to be worth the effort.  To those disciplined enough to complete the exercise, etudes, and solos of Momentum, the two-mallet universe is yours!',
 ];
 
 export const MOMENTUM_QUOTES = [

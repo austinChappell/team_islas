@@ -12,11 +12,12 @@ import {
   OPENING_STATEMENT_INTRO,
   OPENING_STATEMENT_QUOTES,
   OPENING_STATEMENT_VIDS,
-  storeLinks,
 } from '../../data';
 import OpeningStatementBanner from '../../images/opening-statement-banner.jpg';
 import BuyNowButtonWrapper from '../../components/BuyNowButtonWrapper';
 import BuyNowButton from '../../components/ButNowButton';
+
+const storeLinks = {};
 
 const OpeningStatementPage = () => (
   <Layout>

@@ -12,57 +12,10 @@ import { Link } from 'gatsby';
 
 import Layout from '../../components/layout';
 import { Flex } from '../../components/shared';
-import MasterHandsImage from '../../images/book_covers/master_hands.jpg';
-import OpeningStatementImage from '../../images/book_covers/opening_statement.jpg';
-import MomentumImage from '../../images/book_covers/momentum.jpg';
-import SuperHandsImage from '../../images/book_covers/super_hands.jpg';
-
-import {
-  MASTER_HANDS_INTRO,
-  MOMENTUM_INTRO,
-  OPENING_STATEMENT_INTRO,
-  SUPER_HANDS_INTRO,
-  storeLinks,
-} from '../../data';
 
 import '../../components/Shop.css';
 import BuyNowButton from '../../components/ButNowButton';
-
-const authors = {
-  doug: 'Doug Bush',
-  patricia: 'Patricia Islas',
-};
-
-const books = [
-  {
-    author: authors.doug,
-    bookCoverImage: MasterHandsImage,
-    description: MASTER_HANDS_INTRO,
-    storeLink: storeLinks.masterHands,
-    title: 'Master Hands',
-  },
-  {
-    author: authors.patricia,
-    bookCoverImage: MomentumImage,
-    description: MOMENTUM_INTRO,
-    storeLink: storeLinks.momentum,
-    title: 'Momentum',
-  },
-  {
-    author: authors.doug,
-    bookCoverImage: OpeningStatementImage,
-    description: OPENING_STATEMENT_INTRO,
-    storeLink: storeLinks.openingStatement,
-    title: 'Opening Statement',
-  },
-  {
-    author: authors.doug,
-    bookCoverImage: SuperHandsImage,
-    description: SUPER_HANDS_INTRO,
-    storeLink: storeLinks.superHands,
-    title: 'Super Hands',
-  },
-];
+import { books } from '../../data/books';
 
 const Shop = () => (
   <Layout>
@@ -91,7 +44,8 @@ const Shop = () => (
 
                 <Flex alignItems="flex-start" className="description-container">
                   <img
-                    src={book.bookCoverImage}
+                    alt={book.title}
+                    src={book.coverImage}
                     style={{ maxHeight: 200 }}
                   />
 
@@ -113,11 +67,11 @@ const Shop = () => (
               <Flex justifyContent="flex-end" style={{ gap: 8, width: '100%' }}>
                 <Link href={`/shop/${book.title.toLowerCase().replaceAll(' ', '_')}`}>
                   <Button variant="outlined">
-                    View
+                    View More
                   </Button>
                 </Link>
 
-                <BuyNowButton href={book.storeLink} />
+                <BuyNowButton href={book.link} />
               </Flex>
             </CardActions>
           </Card>
