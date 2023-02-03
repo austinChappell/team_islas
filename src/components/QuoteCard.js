@@ -52,7 +52,17 @@ const QuoteCard = ({ quote }) => (
 
       {quote.avatar && (
         <Flex justifyContent="center">
-          <Avatar sx={{ height: 100, width: 100 }} src={quote.avatar} />
+          <Avatar
+            sx={{
+              height: 100,
+              width: 100,
+
+              '& img': {
+                objectPosition: '0px 0px',
+              },
+            }}
+            src={quote.avatar}
+          />
         </Flex>
       )}
     </div>
