@@ -6,11 +6,11 @@ import { booksLookup } from '../../data/books';
 import BookPage from '../../components/BookPage';
 
 // Local Variables
-const book = booksLookup.openingStatement;
+const book = booksLookup.closingRemarks;
 
 // Component Definition
-const OpeningStatementPage = () => (
+const ClosingRemarksPage = () => (
   <BookPage book={book} />
 );
 
-export default OpeningStatementPage;
+export default ClosingRemarksPage;
