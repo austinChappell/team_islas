@@ -8,6 +8,7 @@ import { BIOS } from '../data';
 import BioSection from '../components/BioSection';
 
 import '../components/Home.css';
+import { NAVBAR_HEIGHT } from '../components/header';
 
 const IndexPage = () => (
   <Layout excludePaddingTop>
@@ -16,10 +17,10 @@ const IndexPage = () => (
       position="relative"
     >
       <Box
-        height="100%"
+        height={`calc(100vh - ${NAVBAR_HEIGHT}px)`}
         left={0}
         position="absolute"
-        top={0}
+        top={NAVBAR_HEIGHT}
         width="100%"
       >
         <StaticImage
