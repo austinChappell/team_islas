@@ -3,6 +3,8 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
+import '../Shop.css';
+
 // Internal Dependencies
 import BuyNowButtonWrapper from '../BuyNowButtonWrapper';
 import BuyNowButton from '../ButNowButton';
@@ -43,6 +45,7 @@ const BookPage = ({
         <section style={{ marginTop: 40 }}>
           <Box
             alignItems="flex-start"
+            className="description-container"
             display="flex"
             gap={2}
           >

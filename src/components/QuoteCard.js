@@ -55,6 +55,7 @@ const QuoteCard = ({ quote }) => (
           <Avatar
             sx={{
               height: 100,
+              marginBottom: 2,
               width: 100,
 
               '& img': {
