@@ -38,7 +38,7 @@ const Shop = () => (
                     gutterBottom
                     style={{ marginBottom: 20 }}
                   >
-                    {book.author}
+                    {book.authors.join(', ')}
                   </Typography>
                 </div>
 
