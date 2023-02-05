@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import YouTube from 'react-youtube';
-import { css } from 'react-emotion';
-import { withStyles } from '@material-ui/core/styles';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Modal from '@material-ui/core/Modal';
+import { css } from '@emotion/css';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Container,
-  ResponsiveVideoPlayer,
-} from '../components/shared';
+  Modal,
+  Typography
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import './VideoList.css';
 
 import {
   Heading5,
-  LargeBody,
 } from '../components/shared';
 
 const styles = () => ({
@@ -103,12 +102,12 @@ class VideoList extends Component {
       height: ${videoOptions.height};
       width: ${videoOptions.width};
     `;
-  
+
     return (
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
-        className={styles.modal}
+        className="video-list-modal"
         open={!!currentVideo}
         onClose={this.clearVideo}
       >
@@ -136,7 +135,6 @@ class VideoList extends Component {
   render() {
     const { currentVideo } = this.state;
     const {
-      classes,
       videos,
     } = this.props;
 
@@ -144,7 +142,7 @@ class VideoList extends Component {
 
     return (
       <div
-        className={classes.root}
+        className="video-list-wrapper"
         ref={el => this.vidListContainer = el}
       >
         {videos.map((vid, index) => {
@@ -153,15 +151,15 @@ class VideoList extends Component {
             expansionProps.expanded = true;
           }
           return (
-            <ExpansionPanel key={index} {...expansionProps}>
-              <ExpansionPanelSummary
+            <Accordion key={index} {...expansionProps}>
+              <AccordionSummary
                 expandIcon={!oneVideo && <ExpandMoreIcon />}
               >
                 <Heading5>
                   {vid.title}
                 </Heading5>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
+              </AccordionSummary>
+              <AccordionDetails>
                 <div className={detailsWrapper}>
                   <div
                     className={videoWrapper}
@@ -173,13 +171,13 @@ class VideoList extends Component {
                   </div>
 
                   <div className={videoDescriptionWrapper}>
-                    <LargeBody>
+                    <Typography>
                       {vid.description}
-                    </LargeBody>
+                    </Typography>
                   </div>
                 </div>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
+              </AccordionDetails>
+            </Accordion>
           )
         })}
         {currentVideo && this.renderVideoPlayerModal()}
@@ -192,5 +190,5 @@ VideoList.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(VideoList);
+export default VideoList;
 

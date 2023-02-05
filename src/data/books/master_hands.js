@@ -1,9 +1,9 @@
-import CavazosPhoto from '../images/quotes/david-cavazos.jpg';
-import WestPhoto from '../images/quotes/matthew-west.jpg';
-import YamouniPhoto from '../images/quotes/eliana-yamouni.jpg';
-import SatherPhoto from '../images/quotes/cameron-sather.jpg';
-import PazPhoto from '../images/quotes/roberto-paz.jpg';
-import BrooksPhoto from '../images/quotes/jordan-brooks.jpg';
+import CavazosPhoto from '../../images/quotes/david-cavazos.jpg';
+import WestPhoto from '../../images/quotes/matthew-west.jpg';
+import YamouniPhoto from '../../images/quotes/eliana-yamouni.jpg';
+import SatherPhoto from '../../images/quotes/cameron-sather.jpg';
+import PazPhoto from '../../images/quotes/roberto-paz.jpg';
+import BrooksPhoto from '../../images/quotes/jordan-brooks.jpg';
 
 export const MASTER_HANDS_INTRO = [
   'Master Hands is a collection of intermediate to advanced exercises and etudes meant to increase the control, flow and contrast of ones playing.',

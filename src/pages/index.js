@@ -1,79 +1,89 @@
 import React from 'react';
-import { css } from 'react-emotion';
-import { Button } from '@material-ui/core';
-import { navigate } from 'gatsby';
+import { Box, Container, Typography } from '@mui/material';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
-
-import {
-  Button as BuyNowButton,
-  Container,
-  Heading1,
-  LargeBody,
-  Flex,
-} from '../components/shared';
-
-
-import HomeBg from '../images/home-bg.jpg';
 import Logo from '../components/shared/Logo';
-import { storeLinks } from '../data';
+import { BIOS } from '../data';
+import BioSection from '../components/BioSection';
 
-const homeLayout = css({
-  backgroundImage: `url(${HomeBg})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  textAlign: 'center',
-});
+import '../components/Home.css';
+import { NAVBAR_HEIGHT } from '../components/header';
 
-const IndexPage = () => {
-  const handleNavigateToMomentum = () => {
-    navigate('/momentum');
-  };
-
-  return (
-    <Layout
-      className={homeLayout}
-      overlayColor="rgba(0, 0, 0, 0.8)"
+const IndexPage = () => (
+  <Layout excludePaddingTop>
+    <Box
+      height="100vh"
+      position="relative"
     >
-      <Container>
-        <div style={{ margin: 50 }}>
-          <div style={{ marginBottom: 40 }}>
-            <Logo
-              color="#ffffff"
-              size={120}
-            />
-          </div>
+      <Box
+        height={`calc(100vh - ${NAVBAR_HEIGHT}px)`}
+        left={0}
+        position="absolute"
+        top={NAVBAR_HEIGHT}
+        width="100%"
+      >
+        <StaticImage
+          alt="Home background"
+          className="home-bg"
+          src="../images/home-bg.jpg"
+        />
+      </Box>
 
-          <Heading1 light>
-            New Release - Momentum!
-          </Heading1>
+      <Box
+        height="100%"
+        left={0}
+        position="absolute"
+        sx={{
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        }}
+        top={0}
+        width="100%"
+      >
+        <Container
+          sx={{
+            alignItems: 'center',
+            color: '#ffffff',
+            display: 'flex',
+            flexDirection: 'column',
+            height: '100%',
+            gap: { xs: 4, sm: 8 },
+            paddingTop: '20vh',
+          }}
+        >
+          <Logo
+            color="#ffffff"
+            size={240}
+          />
 
-          <div style={{ margin: '40px 0' }}>
-            <LargeBody light>
-              A collection of exercises, etudes, and solos designed to develop the physical and mental control necessary for self-expression through two-mallet percussion.
-            </LargeBody>
-          </div>
+          <Container maxWidth="sm">
+            <Typography
+              align="center"
+              color="inherit"
+              sx={{ fontSize: { xs: 28, sm: 36 } }}
+              variant="h4"
+            >
+              The combined musical power of husband-wife duo Doug Bush and Patricia Islas
+            </Typography>
+          </Container>
+        </Container>
+      </Box>
+    </Box>
 
-          <Flex justifyContent="center">
-            <div style={{ marginRight: 12 }}>
-              <Button
-                onClick={handleNavigateToMomentum}
-                variant="contained"
-              >
-                Learn More
-              </Button>
-            </div>
-
-            <BuyNowButton
-              buttonText="Buy Now!"
-              href={storeLinks.momentum}
-              variant="contained"
-            />
-          </Flex>
-        </div>
-      </Container>
-    </Layout>
-  );
-};
+    <Container
+      maxWidth="md"
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 4,
+        paddingY: 4,
+      }}
+    >
+      {BIOS.map(bio => (
+        <BioSection key={bio.title} {...bio} />
+      ))}
+    </Container>
+  </Layout>
+);
 
 export default IndexPage;

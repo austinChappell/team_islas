@@ -1,23 +1,23 @@
 import React from 'react';
+import { Typography } from '@mui/material';
+
 import {
-  COLORS,
-  FONT_FAMILIES,
   FONT_SIZES,
 } from '../../../constants';
 
 export const Heading4 = ({
   children,
-  light = false,
   style = {},
 }) => (
-  <h4
-    style={{
-      color: light ? COLORS.FONT.LIGHT : COLORS.FONT.DARK,
-      fontFamily: FONT_FAMILIES.HEADING,
+  <Typography
+    component="h4"
+    fontWeight="bold"
+    sx={{
       fontSize: FONT_SIZES.HEADING_4,
       ...style,
     }}
+    variant="h4"
   >
     {children}
-  </h4>
+  </Typography>
 );

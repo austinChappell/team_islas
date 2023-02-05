@@ -1,72 +1,18 @@
 import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
 import validator from 'validator';
-import { withStyles } from '@material-ui/core/styles';
-import styled from 'react-emotion';
+import { Button, TextField } from '@mui/material';
 
-import { COLORS } from '../constants/colors';
+import './ContactForm.css';
 
 import {
-  Button,
   Heading3,
 } from './shared';
-
-const styles = () => ({
-  form: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-  input: {
-    flexBasis: '40%',
-    margin: '10px',
-    marginLeft: '10px',
-    marginRight: '10px',
-    minWidth: 300,
-  }
-});
-
-const StyledInputWrapper = styled('p')`
-  flex-basis: 40%;
-  margin: 10px;
-  min-width: 300px;
-`;
-
-const StyledLabel = styled('label')`
-  display: block;
-`;
-
-const StyledInput = styled('input')`
-  border: 1px solid ${COLORS.DISABLED};
-  border-radius: 5px;
-  box-sizing: border-box;
-  outline: none;
-  padding: 10px;
-  width: 100%;
-  &:focus {
-    border: 1px solid ${COLORS.PRIMARY_1};
-  }
-`;
-
-const StyledTextArea = styled('textarea')`
-  border: 1px solid ${COLORS.DISABLED};
-  border-radius: 5px;
-  box-sizing: border-box;
-  outline: none;
-  padding: 10px;
-  resize: none;
-  width: 100%;
-  &:focus {
-    border: 1px solid ${COLORS.PRIMARY_1};
-  }
-`;
 
 class ContactForm extends Component {
   state = {
     email: '',
     message: '',
     name: '',
-    phone: '',
   }
 
   handleChange = (e) => {
@@ -78,16 +24,13 @@ class ContactForm extends Component {
       email,
       message,
       name,
-      phone,
     } = this.state;
-    const { classes } = this.props;
 
     const emailValid = validator.isEmail(email);
     const messageValid = validator.isLength(message.trim(), { min: 5 });
     const nameValid = validator.isLength(name.trim(), { min: 2 });
-    const phoneValid = validator.isMobilePhone(phone);
 
-    const formValid = emailValid && messageValid && nameValid && phoneValid;
+    const formValid = emailValid && messageValid && nameValid;
 
     return (
       <div style={{ marginTop: 20 }}>
@@ -98,7 +41,7 @@ class ContactForm extends Component {
         </div>
 
         <form
-          className={classes.form}
+          className="contact-form"
           name="contact"
           method="post"
           data-netlify="true"
@@ -117,7 +60,7 @@ class ContactForm extends Component {
           </p>
 
           <TextField
-            className={classes.input}
+            className="contact-form-input"
             fullWidth
             label="Name"
             margin="normal"
@@ -127,7 +70,7 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={classes.input}
+            className="contact-form-input"
             fullWidth
             label="Email"
             margin="normal"
@@ -137,24 +80,14 @@ class ContactForm extends Component {
             variant="outlined"
           />
           <TextField
-            className={classes.input}
-            fullWidth
-            label="Phone"
-            margin="normal"
-            name="phone"
-            onChange={this.handleChange}
-            value={phone}
-            variant="outlined"
-          />
-          <TextField
-            className={classes.input}
+            className="contact-form-input"
             fullWidth
             label="Message"
             margin="normal"
             multiline
             name="message"
             onChange={this.handleChange}
-            rowsMax="4"
+            rows={4}
             value={message}
             variant="outlined"
           />
@@ -163,7 +96,10 @@ class ContactForm extends Component {
             <Button
               disabled={!formValid}
               type="submit"
-            />
+              variant="contained"
+            >
+              Submit
+            </Button>
           </div>
         </form>
       </div>
@@ -171,4 +107,4 @@ class ContactForm extends Component {
   }
 }
 
-export default withStyles(styles)(ContactForm);
+export default ContactForm;

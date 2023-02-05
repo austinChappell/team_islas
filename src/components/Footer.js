@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {
-  Container,
-  FinePrint,
-  Flex,
-} from './shared';
+import { Container, Typography } from '@mui/material';
+
+import { Flex } from './shared';
 import { COLORS } from '../constants';
 import {
   SOCIAL_MEDIA_LINKS,
@@ -66,12 +64,13 @@ class Footer extends Component {
             justifyContent="space-evenly"
           >
             <div>
-              <FinePrint light>
+              <Typography component="p" sx={{ color: 'white' }} variant="caption">
                 Doug Bush and Patricia Islas
-              </FinePrint>
-              <FinePrint light>
+              </Typography>
+
+              <Typography component="p" sx={{ color: 'white' }} variant="caption">
                 &copy; Team Islas {new Date().getFullYear()}
-              </FinePrint>
+              </Typography>
             </div>
 
             <ul
@@ -80,7 +79,7 @@ class Footer extends Component {
                 display: 'flex',
                 flexWrap: 'wrap',
                 justifyContent: 'center',
-              }}            
+              }}
             >
               {SOCIAL_MEDIA_LINKS.map((link, index) => {
                 const {

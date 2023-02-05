@@ -1,15 +1,12 @@
 import React from 'react';
+import { Container } from '@mui/material';
 
 import Layout from '../components/layout';
-
-import {
-  Container,
-  Heading2,
-} from '../components/shared';
+import { Heading2 } from '../components/shared';
 
 const ContactPage = () => (
   <Layout>
-    <Container>
+    <Container maxWidth="md">
       <Heading2>
         Thank you for contacting us!
       </Heading2>

@@ -4,6 +4,10 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp', // Needed for dynamic images
+    'gatsby-plugin-dark-mode',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

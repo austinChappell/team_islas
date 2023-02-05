@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { css } from 'react-emotion';
+import { css } from '@emotion/css';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'; // eslint-disable-line
 
 import QuoteCard from './QuoteCard';

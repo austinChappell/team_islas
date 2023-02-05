@@ -1,0 +1,4 @@
+export const hiddenAmongstFallenLeavesDescription = [
+  'Hidden Amongst Fallen Leaves is a programmatic percussion quintet written from the heart for Annika Agnihotri, Jessica Yang, Kaitlin Tan, Lily Lee, and Yiwei Shen. These five percussionists were an unrelenting force of musical excellence for the Coppell percussion program from the years 2014 - 2021. Performed on three mounted kick drums and a shared bass drum, all muffled with cup chime, there is a wide range of rhythmic and dynamic challenges presented throughout before concluding on vibraphone and two shared marimbas. Written to be a musical representation of their time in the percussion program at Coppell the goal was to create a unique musical offering, showcasing a wide range of touch, contrast, and virtuosity.',
+  'Hidden Amongst Fallen Leaves was commissioned by Annie Chernow for Coppell High School\'s performance of the 2021 TMEA Invited Percussion Ensemble concert.',
+];

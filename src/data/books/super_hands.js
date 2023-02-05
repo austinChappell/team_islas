@@ -1,8 +1,8 @@
-import AusdemorePhoto from '../images/quotes/jeff-ausdemore.jpg';
-import AvilaPhoto from '../images/quotes/art-avila.jpg';
-import ProsperiePhoto from '../images/quotes/jeff-prosperie.jpg';
-import ScheerPhoto from '../images/quotes/zach-scheer.jpg';
-import WeberPhoto from '../images/quotes/paul-weber.jpg';
+import AusdemorePhoto from '../../images/quotes/jeff-ausdemore.jpg';
+import AvilaPhoto from '../../images/quotes/art-avila.jpg';
+import ProsperiePhoto from '../../images/quotes/jeff-prosperie.jpg';
+import ScheerPhoto from '../../images/quotes/zach-scheer.jpg';
+import WeberPhoto from '../../images/quotes/paul-weber.jpg';
 
 export const SUPER_HANDS_INTRO = [
   'Super Hands is a collection of exercises, etudes, and solos for the intermediate to advanced rudimental percussionist.',

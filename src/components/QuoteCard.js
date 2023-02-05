@@ -4,12 +4,10 @@ import {
   FaQuoteLeft,
   FaQuoteRight,
 } from 'react-icons/fa';
+import { Avatar, Typography } from '@mui/material';
 import {
-  Avatar,
   Flex,
   Heading6,
-  LargeBody,
-  FinePrint,
 } from './shared';
 import { COLORS } from '../constants';
 
@@ -38,22 +36,36 @@ const QuoteCard = ({ quote }) => (
         {quote.name}
       </Heading6>
       <div
-        style={{ margin: '10px auto' }}
+        style={{ margin: '4px auto 8px' }}
       >
         {quote.titles.map((title, index) => (
-          <FinePrint
+          <Typography
+            component="p"
             key={index}
-            style={{
-              lineHeight: '100%',
-              margin: 0,
-            }}
+            sx={{ lineHeight: 1 }}
+            variant="caption"
           >
             {title}
-          </FinePrint>
+          </Typography>
         ))}
       </div>
 
-      {quote.avatar && <Avatar src={quote.avatar} />}
+      {quote.avatar && (
+        <Flex justifyContent="center">
+          <Avatar
+            sx={{
+              height: 100,
+              marginBottom: 2,
+              width: 100,
+
+              '& img': {
+                objectPosition: '0px 0px',
+              },
+            }}
+            src={quote.avatar}
+          />
+        </Flex>
+      )}
     </div>
     <div
       style={{
@@ -62,15 +74,11 @@ const QuoteCard = ({ quote }) => (
         textAlign: 'left',
       }}
     >
-      <LargeBody
-        style={{
-          marginTop: 0,
-        }}
-      >
+      <Typography>
         <FaQuoteLeft style={{ marginRight: 5 }} />
         {quote.quote}
         <FaQuoteRight style={{ marginLeft: 5 }} />
-      </LargeBody>
+      </Typography>
     </div>
   </Flex>
 );
