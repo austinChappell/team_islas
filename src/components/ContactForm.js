@@ -13,7 +13,6 @@ class ContactForm extends Component {
     email: '',
     message: '',
     name: '',
-    phone: '',
   }
 
   handleChange = (e) => {
@@ -25,15 +24,13 @@ class ContactForm extends Component {
       email,
       message,
       name,
-      phone,
     } = this.state;
 
     const emailValid = validator.isEmail(email);
     const messageValid = validator.isLength(message.trim(), { min: 5 });
     const nameValid = validator.isLength(name.trim(), { min: 2 });
-    const phoneValid = validator.isMobilePhone(phone);
 
-    const formValid = emailValid && messageValid && nameValid && phoneValid;
+    const formValid = emailValid && messageValid && nameValid;
 
     return (
       <div style={{ marginTop: 20 }}>
@@ -80,16 +77,6 @@ class ContactForm extends Component {
             name="email"
             onChange={this.handleChange}
             value={email}
-            variant="outlined"
-          />
-          <TextField
-            className="contact-form-input"
-            fullWidth
-            label="Phone"
-            margin="normal"
-            name="phone"
-            onChange={this.handleChange}
-            value={phone}
             variant="outlined"
           />
           <TextField
