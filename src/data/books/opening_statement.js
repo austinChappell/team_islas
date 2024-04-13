@@ -5,7 +5,7 @@ export const OPENING_STATEMENT_INTRO = [
 export const OPENING_STATEMENT_QUOTES = [
   {
     name: 'Matt Ehlers',
-    titles: ['Associate Director of Bands/Director of Percussion', 'McCallum High School Fine Arts Academy', 'Austin, TX'],
+    titles: ['Director of Percussion', 'Dripping Springs I.S.D.', 'Dripping Springs, TX'],
     quote: 'Doug Bush has done it again! "Opening Statement" fills a massive void in beginner-level snare drum solo literature. Doug has done such an amazing job writing these solos in a manner that is educational yet still fresh and fun. This book will lead your students straight into "Super Hands" and will set up the solid foundation needed for "Master Hands." It is a must-have for every band program.',
   },
   {

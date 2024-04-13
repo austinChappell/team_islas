@@ -20,9 +20,11 @@ import HymnOfTheShieldMaidenImage from '../../images/book_covers/hymn_of_the_shi
 import MasterHandsImage from '../../images/book_covers/master_hands.jpg';
 import MomentumImage from '../../images/book_covers/momentum.jpg';
 import OpeningStatementImage from '../../images/book_covers/opening_statement.jpg';
+import PlayersGuideImage from '../../images/book_covers/players_guide.jpg';
 import SuperHandsImage from '../../images/book_covers/super_hands.jpg';
 import YoursRudimentallyImage from '../../images/book_covers/yours_rudimentally.jpg';
 import EldridgePhoto from '../../images/quotes/andrew-eldridge.jpg';
+import { PLAYERS_GUIDE_QUOTES, PLAYERS_GUIDE_VIDS } from './players_guide';
 
 const authors = {
   doug: 'Doug Bush',
@@ -99,6 +101,15 @@ export const booksLookup = {
     testimonials: OPENING_STATEMENT_QUOTES,
     title: 'Opening Statement',
     videos: OPENING_STATEMENT_VIDS,
+  },
+  playersGuide: {
+    authors: [authors.doug],
+    coverImage: PlayersGuideImage,
+    description: [],
+    link: 'https://www.lulu.com/shop/doug-bush/players-guide-for-the-beginning-percussionist/paperback/product-gjjzkj7.html',
+    testimonials: PLAYERS_GUIDE_QUOTES,
+    title: "Player's Guide For the Beginning Percussionist",
+    videos: PLAYERS_GUIDE_VIDS,
   },
   superHands: {
     authors: [authors.doug],
