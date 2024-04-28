@@ -65,7 +65,7 @@ const Shop = () => (
 
             <CardActions>
               <Flex justifyContent="flex-end" style={{ gap: 8, width: '100%' }}>
-                <Link href={`/shop/${book.title.toLowerCase().replaceAll(' ', '_')}`}>
+                <Link href={`/shop/${book.title.toLowerCase().replaceAll(' ', '_').replaceAll('\'', '')}`}>
                   <Button variant="outlined">
                     View More
                   </Button>

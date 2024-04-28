@@ -9,6 +9,11 @@ import BioSection from '../components/BioSection';
 
 import '../components/Home.css';
 import { NAVBAR_HEIGHT } from '../components/header';
+import BuyNowButtonWrapper from '../components/BuyNowButtonWrapper';
+import BuyNowButton from '../components/ButNowButton';
+import { booksLookup } from '../data/books';
+
+const promoBook = booksLookup.playersGuide;
 
 const IndexPage = () => (
   <Layout excludePaddingTop>
@@ -47,24 +52,47 @@ const IndexPage = () => (
             display: 'flex',
             flexDirection: 'column',
             height: '100%',
-            gap: { xs: 4, sm: 8 },
+            gap: { xs: 4, sm: 6 },
             paddingTop: '20vh',
           }}
         >
           <Logo
             color="#ffffff"
-            size={240}
+            size={200}
           />
 
           <Container maxWidth="sm">
             <Typography
               align="center"
               color="inherit"
-              sx={{ fontSize: { xs: 28, sm: 36 } }}
+              sx={{ fontSize: { xs: 28, sm: 30 } }}
               variant="h4"
             >
               The combined musical power of husband-wife duo Doug Bush and Patricia Islas
             </Typography>
+
+            {promoBook && (
+              <Box
+                marginTop={2}
+                paddingY={4}
+                sx={{
+                  alignItems: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <Box
+                  alt={promoBook.title}
+                  boxShadow="0px 0px 2px 2px #eee"
+                  component="img"
+                  maxHeight={300}
+                  marginBottom={4}
+                  src={promoBook.coverImage}
+                />
+
+                <BuyNowButton href={promoBook.link} />
+              </Box>
+            )}
           </Container>
         </Container>
       </Box>
